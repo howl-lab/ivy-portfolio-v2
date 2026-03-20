@@ -384,7 +384,7 @@ export const PROJECTS: Project[] = [
   {
     id: "socratic",
     label: "Socratic",
-    tags: ["rebrand", "education", "Google", "mobile"],
+    tags: ["GenAI", "education", "Google", "app"],
     summary: [
       "Rebranding the AI-powered app, ",
       {

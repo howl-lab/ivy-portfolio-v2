@@ -333,10 +333,10 @@ const PROJECTS = [
         id: "socratic",
         label: "Socratic",
         tags: [
-            "rebrand",
+            "GenAI",
             "education",
             "Google",
-            "mobile"
+            "app"
         ],
         summary: [
             "Rebranding the AI-powered app, ",
