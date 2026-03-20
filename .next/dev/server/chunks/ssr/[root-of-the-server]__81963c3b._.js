@@ -524,63 +524,40 @@ function Media({ src, style }) {
         columnNumber: 5
     }, this);
 }
-// ─── Draggable Project Context modal ─────────────────────────────────────────
+// ─── Project Context modal ───────────────────────────────────────────────────
 function ProjectContextModal({ sidebar, onClose, anchorRef }) {
     const [pos, setPos] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
-    const dragging = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(false);
-    const offset = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])({
-        x: 0,
-        y: 0
-    });
-    const modalRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    // Position modal below the button on first render
+    const [isMobile, setIsMobile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        if (window.innerWidth < 640) {
-            setPos({
-                x: 0,
-                y: 0
-            }); // sentinel; actual position handled via CSS on mobile
-        } else if (anchorRef.current) {
-            const rect = anchorRef.current.getBoundingClientRect();
-            setPos({
-                x: rect.right - 360,
-                y: rect.bottom + 8
-            });
-        } else {
-            setPos({
-                x: window.innerWidth - 400,
-                y: 80
-            });
-        }
+        const update = ()=>{
+            if (window.innerWidth < 640) {
+                setIsMobile(true);
+                setPos({
+                    x: 0,
+                    y: 0
+                });
+            } else {
+                setIsMobile(false);
+                if (anchorRef.current) {
+                    const rect = anchorRef.current.getBoundingClientRect();
+                    setPos({
+                        x: rect.right - 360,
+                        y: rect.bottom + 8
+                    });
+                } else {
+                    setPos({
+                        x: window.innerWidth - 400,
+                        y: 80
+                    });
+                }
+            }
+        };
+        update();
+        window.addEventListener("resize", update);
+        return ()=>window.removeEventListener("resize", update);
     }, [
         anchorRef
     ]);
-    const onMouseDown = (e)=>{
-        dragging.current = true;
-        offset.current = {
-            x: e.clientX - (pos?.x ?? 0),
-            y: e.clientY - (pos?.y ?? 0)
-        };
-        e.preventDefault();
-    };
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const onMove = (e)=>{
-            if (!dragging.current) return;
-            setPos({
-                x: e.clientX - offset.current.x,
-                y: e.clientY - offset.current.y
-            });
-        };
-        const onUp = ()=>{
-            dragging.current = false;
-        };
-        window.addEventListener("mousemove", onMove);
-        window.addEventListener("mouseup", onUp);
-        return ()=>{
-            window.removeEventListener("mousemove", onMove);
-            window.removeEventListener("mouseup", onUp);
-        };
-    }, []);
     if (!pos) return null;
     const LABELS = {
         problem: "Problem",
@@ -589,9 +566,8 @@ function ProjectContextModal({ sidebar, onClose, anchorRef }) {
         outcome: "Outcome"
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        ref: modalRef,
         className: "modal-card",
-        style: window.innerWidth < 640 ? {
+        style: isMobile ? {
             position: "fixed",
             top: "50%",
             left: "50%",
@@ -601,8 +577,7 @@ function ProjectContextModal({ sidebar, onClose, anchorRef }) {
             border: "1px solid #ddd",
             borderRadius: 0,
             width: "90vw",
-            maxWidth: 360,
-            userSelect: "auto"
+            maxWidth: 360
         } : {
             position: "fixed",
             top: pos.y,
@@ -612,19 +587,16 @@ function ProjectContextModal({ sidebar, onClose, anchorRef }) {
             border: "1px solid #ddd",
             borderRadius: 0,
             width: 360,
-            maxWidth: "90vw",
-            userSelect: dragging.current ? "none" : "auto"
+            maxWidth: "90vw"
         },
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                onMouseDown: onMouseDown,
                 style: {
                     padding: "14px 20px",
                     borderBottom: "1px solid #eee",
                     display: "flex",
                     justifyContent: "space-between",
-                    alignItems: "center",
-                    cursor: "grab"
+                    alignItems: "center"
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -639,7 +611,7 @@ function ProjectContextModal({ sidebar, onClose, anchorRef }) {
                         children: "Project Context"
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 138,
+                        lineNumber: 111,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -656,13 +628,13 @@ function ProjectContextModal({ sidebar, onClose, anchorRef }) {
                         children: "×"
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 150,
+                        lineNumber: 123,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 127,
+                lineNumber: 102,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -685,7 +657,7 @@ function ProjectContextModal({ sidebar, onClose, anchorRef }) {
                                 children: LABELS[key]
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 170,
+                                lineNumber: 143,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -698,24 +670,24 @@ function ProjectContextModal({ sidebar, onClose, anchorRef }) {
                                 children: sidebar[key]
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 181,
+                                lineNumber: 154,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, key, true, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 169,
+                        lineNumber: 142,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 167,
+                lineNumber: 140,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/[projectId]/page.tsx",
-        lineNumber: 94,
+        lineNumber: 72,
         columnNumber: 5
     }, this);
 }
@@ -747,7 +719,7 @@ function ContributionCard({ contribution }) {
                         children: contribution.cardTitle ?? contribution.title
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 210,
+                        lineNumber: 183,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -763,7 +735,7 @@ function ContributionCard({ contribution }) {
                         children: contribution.expandedText
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 221,
+                        lineNumber: 194,
                         columnNumber: 9
                     }, this),
                     contribution.expandedImages && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -789,12 +761,12 @@ function ContributionCard({ contribution }) {
                                             src: img.src
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/[projectId]/page.tsx",
-                                            lineNumber: 260,
+                                            lineNumber: 233,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 251,
+                                        lineNumber: 224,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -808,24 +780,24 @@ function ContributionCard({ contribution }) {
                                         children: img.caption
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 262,
+                                        lineNumber: 235,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, i, true, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 245,
+                                lineNumber: 218,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 237,
+                        lineNumber: 210,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 202,
+                lineNumber: 175,
                 columnNumber: 7
             }, this),
             contribution.subCard && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -847,7 +819,7 @@ function ContributionCard({ contribution }) {
                         children: contribution.subCard.title
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 289,
+                        lineNumber: 262,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -863,7 +835,7 @@ function ContributionCard({ contribution }) {
                         children: contribution.subCard.expandedText
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 300,
+                        lineNumber: 273,
                         columnNumber: 11
                     }, this),
                     contribution.subCard.expandedImages && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -889,12 +861,12 @@ function ContributionCard({ contribution }) {
                                             src: img.src
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/[projectId]/page.tsx",
-                                            lineNumber: 326,
+                                            lineNumber: 299,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 317,
+                                        lineNumber: 290,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -908,30 +880,30 @@ function ContributionCard({ contribution }) {
                                         children: img.caption
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 328,
+                                        lineNumber: 301,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, i, true, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 316,
+                                lineNumber: 289,
                                 columnNumber: 17
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 314,
+                        lineNumber: 287,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 281,
+                lineNumber: 254,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/[projectId]/page.tsx",
-        lineNumber: 201,
+        lineNumber: 174,
         columnNumber: 5
     }, this);
 }
@@ -962,12 +934,12 @@ function CaseStudyPage() {
                 children: "Project not found."
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 376,
+                lineNumber: 349,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 367,
+            lineNumber: 340,
             columnNumber: 7
         }, this);
     }
@@ -998,7 +970,7 @@ function CaseStudyPage() {
                 children: "← back home"
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 386,
+                lineNumber: 359,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1014,7 +986,7 @@ function CaseStudyPage() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 419,
+                        lineNumber: 392,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1041,7 +1013,7 @@ function CaseStudyPage() {
                                         children: project.label
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 434,
+                                        lineNumber: 407,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1055,18 +1027,18 @@ function CaseStudyPage() {
                                                 children: tag
                                             }, tag, false, {
                                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                                lineNumber: 448,
+                                                lineNumber: 421,
                                                 columnNumber: 17
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 446,
+                                        lineNumber: 419,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 433,
+                                lineNumber: 406,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1080,13 +1052,13 @@ function CaseStudyPage() {
                                 children: "Project Context"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 456,
+                                lineNumber: 429,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 422,
+                        lineNumber: 395,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1106,7 +1078,7 @@ function CaseStudyPage() {
                                 children: "My Contributions"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 473,
+                                lineNumber: 446,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1134,18 +1106,18 @@ function CaseStudyPage() {
                                         children: seg.text
                                     }, i, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 502,
+                                        lineNumber: 475,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 484,
+                                lineNumber: 457,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 467,
+                        lineNumber: 440,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1161,25 +1133,25 @@ function CaseStudyPage() {
                                 children: c.title
                             }, c.title, false, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 530,
+                                lineNumber: 503,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 521,
+                        lineNumber: 494,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ContributionCard, {
                         contribution: activeContribution
                     }, activeTab, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 541,
+                        lineNumber: 514,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 411,
+                lineNumber: 384,
                 columnNumber: 7
             }, this),
             contextOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ProjectContextModal, {
@@ -1188,13 +1160,13 @@ function CaseStudyPage() {
                 anchorRef: contextBtnRef
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 546,
+                lineNumber: 519,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/[projectId]/page.tsx",
-        lineNumber: 384,
+        lineNumber: 357,
         columnNumber: 5
     }, this);
 }

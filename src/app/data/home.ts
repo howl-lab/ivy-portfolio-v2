@@ -49,19 +49,19 @@ export const HOME_PROJECTS: HomeProject[] = [
       {
         title: "Developer tool",
         description:
-          "Designed a friendly interface for both technical and non-technical audiences around Headroom's API and SDK",
+          "Developed a SDK tool to showcase Headroom's AI capabilities and streamline to teams",
         hoverImage: "/images/headroom/sdk-tool.jpg",
       },
       {
         title: "Lucidspark extension",
         description:
-          "Led B2B collaboration integrating Headroom's AI into Lucid's whiteboard, reaching 30M+ potential users",
+          "Led the integrated design collaboration with Lucidspark, reaching 30M+ potential users",
         hoverImage: "/images/headroom/lucid-spark.jpg",
       },
       {
         title: "The Headroom brand",
         description:
-          "Built brand presence through design system, Webflow site, and integrated product identity",
+          "Defining the brand through design system, marketing materials, and product interface",
         hoverImage: "/images/headroom/headroom.jpg",
       },
     ],
@@ -107,13 +107,13 @@ export const HOME_PROJECTS: HomeProject[] = [
       {
         title: "Elements of storytelling",
         description:
-          "Wove curatorial narrative through interactive moments using handwriting as an organic design element",
+          "I designed an interactive experience to introduce visitors to the site and award",
         hoverImage: "/images/mad/mad-story.jpg",
       },
       {
         title: "Website design",
         description:
-          "Defined an art-first interaction system, working directly with the FE engineer on accessibility and components",
+          "I defined a narrative-first and hands-on interaction system and visual language",
         hoverImage: "/images/mad/mad-web.jpg",
       },
     ],
@@ -128,19 +128,18 @@ export const HOME_PROJECTS: HomeProject[] = [
       {
         title: "Established visual styleguide",
         description:
-          "Defined the new visual system for the rebrand — graphic style, custom font, and Material-aligned color theme",
+          "I defined the visual style, tone, and elements for the rebrand",
         hoverImage: "/images/socratic/socratic.jpg",
       },
       {
         title: "First-party content creation",
         description:
-          "Led creation of 900+ explainer cards across subjects — 30-40% of all usage surfaced a card",
+          "I collaborated with pedagogy team and led creation of 900+ content cards",
         hoverImage: "/images/socratic/socratic-content.jpg",
       },
       {
         title: "Custom math keyboard",
-        description:
-          "Led creation of 900+ explainer cards across subjects — 30-40% of all usage surfaced a card",
+        description: "Cross-team collaborated on Google’s first math keyboard",
         hoverImage: "/images/socratic/socratic-content.jpg",
       },
     ],

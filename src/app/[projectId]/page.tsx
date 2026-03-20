@@ -26,7 +26,7 @@ function Media({ src, style }: { src: string; style?: React.CSSProperties }) {
   );
 }
 
-// ─── Draggable Project Context modal ─────────────────────────────────────────
+// ─── Project Context modal ───────────────────────────────────────────────────
 function ProjectContextModal({
   sidebar,
   onClose,
@@ -37,49 +37,27 @@ function ProjectContextModal({
   anchorRef: React.RefObject<HTMLButtonElement | null>;
 }) {
   const [pos, setPos] = useState<{ x: number; y: number } | null>(null);
-  const dragging = useRef(false);
-  const offset = useRef({ x: 0, y: 0 });
-  const modalRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Position modal below the button on first render
   useEffect(() => {
-    if (window.innerWidth < 640) {
-      setPos({ x: 0, y: 0 }); // sentinel; actual position handled via CSS on mobile
-    } else if (anchorRef.current) {
-      const rect = anchorRef.current.getBoundingClientRect();
-      setPos({ x: rect.right - 360, y: rect.bottom + 8 });
-    } else {
-      setPos({ x: window.innerWidth - 400, y: 80 });
-    }
+    const update = () => {
+      if (window.innerWidth < 640) {
+        setIsMobile(true);
+        setPos({ x: 0, y: 0 });
+      } else {
+        setIsMobile(false);
+        if (anchorRef.current) {
+          const rect = anchorRef.current.getBoundingClientRect();
+          setPos({ x: rect.right - 360, y: rect.bottom + 8 });
+        } else {
+          setPos({ x: window.innerWidth - 400, y: 80 });
+        }
+      }
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
   }, [anchorRef]);
-
-  const onMouseDown = (e: React.MouseEvent) => {
-    dragging.current = true;
-    offset.current = {
-      x: e.clientX - (pos?.x ?? 0),
-      y: e.clientY - (pos?.y ?? 0),
-    };
-    e.preventDefault();
-  };
-
-  useEffect(() => {
-    const onMove = (e: MouseEvent) => {
-      if (!dragging.current) return;
-      setPos({
-        x: e.clientX - offset.current.x,
-        y: e.clientY - offset.current.y,
-      });
-    };
-    const onUp = () => {
-      dragging.current = false;
-    };
-    window.addEventListener("mousemove", onMove);
-    window.addEventListener("mouseup", onUp);
-    return () => {
-      window.removeEventListener("mousemove", onMove);
-      window.removeEventListener("mouseup", onUp);
-    };
-  }, []);
 
   if (!pos) return null;
 
@@ -92,10 +70,9 @@ function ProjectContextModal({
 
   return (
     <div
-      ref={modalRef}
       className="modal-card"
       style={
-        window.innerWidth < 640
+        isMobile
           ? {
               position: "fixed",
               top: "50%",
@@ -107,7 +84,6 @@ function ProjectContextModal({
               borderRadius: 0,
               width: "90vw",
               maxWidth: 360,
-              userSelect: "auto",
             }
           : {
               position: "fixed",
@@ -119,20 +95,17 @@ function ProjectContextModal({
               borderRadius: 0,
               width: 360,
               maxWidth: "90vw",
-              userSelect: dragging.current ? "none" : "auto",
             }
       }
     >
-      {/* Drag handle / header */}
+      {/* Header */}
       <div
-        onMouseDown={onMouseDown}
         style={{
           padding: "14px 20px",
           borderBottom: "1px solid #eee",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          cursor: "grab",
         }}
       >
         <span
