@@ -1,0 +1,228 @@
+[00:00:00.849] Server  LOG     ✓ Ready in 658ms
+[00:00:11.539] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:47.338] Server  LOG     ✓ Compiled in 83ms
+[00:09:50.581] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:56.813] Server  LOG     ✓ Compiled in 47ms
+[00:10:11.666] Server  LOG     ✓ Compiled in 43ms
+[00:10:39.074] Server  LOG     ✓ Compiled in 41ms
+[00:13:52.944] Server  LOG     ✓ Compiled in 14ms
+[00:15:57.923] Server  LOG     ✓ Compiled in 165ms
+[00:16:29.697] Server  LOG     ✓ Compiled in 151ms
+[00:16:40.793] Server  LOG     ✓ Compiled in 175ms
+[00:17:12.457] Server  LOG     ✓ Compiled in 110ms
+[00:17:22.925] Server  LOG     ✓ Compiled in 167ms
+[00:17:43.605] Server  LOG     ✓ Compiled in 150ms
+[00:18:05.651] Server  LOG     ✓ Compiled in 157ms
+[00:18:27.713] Server  LOG     ✓ Compiled in 155ms
+[00:19:45.219] Server  LOG     ✓ Compiled in 151ms
+[00:20:13.432] Server  LOG     ✓ Compiled in 152ms
+[00:20:19.161] Server  LOG     ✓ Compiled in 115ms
+[00:20:19.242] Browser ERROR   %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Removing marginBottom margin
+[00:21:58.200] Server  LOG     ✓ Compiled in 149ms
+[00:25:03.074] Server  LOG     ✓ Compiled in 166ms
+[00:25:09.666] Server  LOG     ✓ Compiled in 112ms
+[00:30:21.181] Server  LOG     ✓ Compiled in 188ms
+[00:30:32.200] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:32:40.315] Server  LOG     ✓ Compiled in 104ms
+[00:40:10.906] Server  LOG     ✓ Compiled in 172ms
+[00:40:16.209] Server  LOG     ✓ Compiled in 125ms
+[00:40:29.117] Server  LOG     ✓ Compiled in 153ms
+[00:40:39.811] Server  LOG     ✓ Compiled in 170ms
+[00:40:47.275] Server  LOG     ✓ Compiled in 107ms
+[00:40:51.876] Server  LOG     ✓ Compiled in 103ms
+[00:40:56.737] Server  LOG     ✓ Compiled in 116ms
+[00:41:00.905] Server  LOG     ✓ Compiled in 99ms
+[00:58:57.064] Server  LOG     ✓ Compiled in 240ms
+[00:59:49.310] Server  LOG     ✓ Compiled in 210ms
+[00:59:54.197] Server  LOG     ✓ Compiled in 198ms
+[00:59:59.809] Server  LOG     ✓ Compiled in 161ms
+[01:00:08.045] Server  LOG     ✓ Compiled in 89ms
+[01:01:26.778] Server  LOG     ✓ Compiled in 19ms
+[01:01:32.389] Server  LOG     ✓ Compiled in 154ms
+[01:01:36.589] Server  LOG     ✓ Compiled in 160ms
+[01:03:16.788] Server  LOG     ✓ Compiled in 8ms
+[01:04:28.215] Server  LOG     ✓ Compiled in 6ms
+[04:47:39.989] Server  LOG     ✓ Compiled in 7ms
+[04:47:51.703] Server  LOG     ✓ Compiled in 152ms
+[04:47:51.809] Browser ERROR   ./src/app/[projectId]/page.tsx:281:1
+Parsing ecmascript source code failed
+  279 |     </div>
+  280 |   );
+> 281 | }
+      | ^
+  282 |
+  283 | // ─── Case study page ──────────────────────────────────────────────────────────
+  284 | export default function CaseStudyPage() {
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./src/app/[projectId]/page.tsx [Client Component Browser]
+    ./src/app/[projectId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/[projectId]/page.tsx [Client Component SSR]
+    ./src/app/[projectId]/page.tsx [Server Component]
+[04:49:48.778] Server  LOG     ✓ Compiled in 4ms
+[04:51:11.171] Server  LOG     ✓ Compiled in 270ms
+[04:51:16.665] Server  LOG     ✓ Compiled in 190ms
+[04:52:30.706] Server  LOG     ✓ Compiled in 6ms
+[04:56:25.099] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:57:15.659] Server  LOG     ✓ Compiled in 7ms
+[04:59:21.235] Server  LOG     ✓ Compiled in 4ms
+[05:07:54.011] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:11:02.806] Server  LOG     ✓ Compiled in 174ms
+[05:14:49.780] Server  LOG     ✓ Compiled in 319ms
+[05:16:49.510] Server  LOG     ✓ Compiled in 193ms
+[05:17:43.499] Server  LOG     ✓ Compiled in 6ms
+[05:19:34.649] Server  LOG     ✓ Compiled in 4ms
+[05:19:47.366] Server  LOG     ✓ Compiled in 6ms
+[05:20:56.057] Server  LOG     ✓ Compiled in 5ms
+[05:21:19.620] Server  LOG     ✓ Compiled in 4ms
+[05:21:41.995] Server  LOG     ✓ Compiled in 4ms
+[05:22:02.184] Server  LOG     ✓ Compiled in 4ms
+[05:22:14.477] Server  LOG     ✓ Compiled in 5ms
+[05:22:22.985] Server  LOG     ✓ Compiled in 6ms
+[05:23:35.729] Server  LOG     ✓ Compiled in 61ms
+[05:23:40.044] Server  LOG     ✓ Compiled in 5ms
+[05:25:16.102] Server  LOG     ✓ Compiled in 264ms
+[05:26:47.270] Server  LOG     ✓ Compiled in 9ms
+[05:26:57.068] Server  LOG     ✓ Compiled in 4ms
+[05:33:23.274] Server  LOG     ✓ Compiled in 13ms
+[05:33:51.062] Server  LOG     ✓ Compiled in 163ms
+[05:33:51.296] Browser ERROR   uncaughtError: ReferenceError: PROJECTS is not defined
+[05:33:57.715] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:33:57.740] Server  LOG     ✓ Compiled in 83ms
+[05:33:57.879] Server  ERROR   ⨯ ReferenceError: PROJECTS is not defined
+[05:33:58.164] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:33:59.298] Browser ERROR   uncaughtError: ReferenceError: PROJECTS is not defined
+[05:34:01.871] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:34:01.920] Server  LOG     ✓ Compiled in 94ms
+[05:34:02.115] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:35:27.106] Server  LOG     ✓ Compiled in 3ms
+[05:37:14.112] Server  LOG     ✓ Compiled in 3ms
+[05:39:21.021] Server  LOG     ✓ Compiled in 7ms
+[05:39:38.223] Server  LOG     ✓ Compiled in 10ms
+[05:40:38.936] Server  LOG     ✓ Compiled in 2ms
+[05:42:49.888] Server  LOG     ✓ Compiled in 33ms
+[05:43:05.890] Server  LOG     ✓ Compiled in 6ms
+[05:44:38.389] Server  LOG     ✓ Compiled in 6ms
+[05:45:59.148] Server  LOG     ✓ Compiled in 226ms
+[05:46:04.264] Server  LOG     ✓ Compiled in 17ms
+[05:49:00.305] Server  LOG     ✓ Compiled in 216ms
+[06:10:56.463] Server  LOG     ✓ Compiled in 18ms
+[06:11:27.029] Server  LOG     ✓ Compiled in 3ms
+[06:12:22.075] Server  LOG     ✓ Compiled in 281ms
+[06:12:38.337] Server  LOG     ✓ Compiled in 140ms
+[06:21:34.128] Server  LOG     ✓ Compiled in 157ms
+[06:29:06.932] Server  LOG     ✓ Compiled in 227ms
+[06:29:13.582] Server  LOG     ✓ Compiled in 232ms
+[06:29:43.593] Server  LOG     ✓ Compiled in 4ms
+[06:29:53.406] Server  LOG     ✓ Compiled in 9ms
+[06:31:02.304] Server  LOG     ✓ Compiled in 3ms
+[06:33:04.791] Server  LOG     ✓ Compiled in 5ms
+[06:33:18.899] Server  LOG     ✓ Compiled in 5ms
+[06:33:36.475] Server  LOG     ✓ Compiled in 4ms
+[09:28:37.457] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[10:02:19.545] Server  LOG     ✓ Compiled in 156ms
+[10:02:26.156] Server  LOG     ✓ Compiled in 3ms
+[10:02:30.962] Server  LOG     ✓ Compiled in 240ms
+[10:02:35.904] Server  LOG     ✓ Compiled in 195ms
+[10:04:51.305] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[10:06:23.795] Server  LOG     ✓ Compiled in 23ms
+[10:07:17.085] Server  LOG     ✓ Compiled in 7ms
+[10:07:36.901] Server  LOG     ✓ Compiled in 3ms
+[10:10:19.211] Server  LOG     ✓ Compiled in 15ms
+[10:10:24.661] Server  LOG     ✓ Compiled in 5ms
+[10:10:34.394] Server  LOG     ✓ Compiled in 5ms
+[10:10:40.068] Server  LOG     ✓ Compiled in 5ms
+[10:10:44.072] Server  LOG     ✓ Compiled in 4ms
+[10:10:48.324] Server  LOG     ✓ Compiled in 8ms
+[10:10:52.996] Server  LOG     ✓ Compiled in 6ms
+[10:10:56.954] Server  LOG     ✓ Compiled in 4ms
+[10:11:00.856] Server  LOG     ✓ Compiled in 6ms
+[10:11:05.305] Server  LOG     ✓ Compiled in 4ms
+[10:11:10.005] Server  LOG     ✓ Compiled in 4ms
+[10:11:13.962] Server  LOG     ✓ Compiled in 4ms
+[10:20:04.634] Server  LOG     ✓ Compiled in 20ms
+[10:20:27.418] Server  LOG     ✓ Compiled in 6ms
+[10:21:06.055] Server  LOG     ✓ Compiled in 7ms
+[10:21:43.008] Server  LOG     ✓ Compiled in 3ms
+[10:21:49.607] Server  LOG     ✓ Compiled in 3ms
+[10:21:54.031] Server  LOG     ✓ Compiled in 5ms
+[10:22:35.179] Server  LOG     ✓ Compiled in 3ms
+[10:22:39.023] Server  LOG     ✓ Compiled in 2ms
+[10:23:14.722] Server  LOG     ✓ Compiled in 4ms
+[10:24:01.330] Server  LOG     ✓ Compiled in 3ms
+[10:24:48.511] Server  LOG     ✓ Compiled in 33ms
+[10:25:15.033] Server  LOG     ✓ Compiled in 3ms
+[10:26:33.344] Server  LOG     ✓ Compiled in 21ms
+[10:26:54.428] Server  LOG     ✓ Compiled in 3ms
+[10:27:02.710] Server  LOG     ✓ Compiled in 4ms
+[10:27:20.423] Server  LOG     ✓ Compiled in 2ms
+[10:28:18.633] Server  LOG     ✓ Compiled in 6ms
+[10:28:58.119] Server  LOG     ✓ Compiled in 3ms
+[10:29:08.448] Server  LOG     ✓ Compiled in 4ms
+[10:30:24.701] Server  LOG     ✓ Compiled in 3ms
+[10:32:59.265] Server  LOG     ✓ Compiled in 7ms
+[10:35:12.709] Server  LOG     ✓ Compiled in 3ms
+[10:35:27.593] Server  LOG     ✓ Compiled in 3ms
+[10:36:26.554] Server  LOG     ✓ Compiled in 26ms
+[10:36:54.753] Server  LOG     ✓ Compiled in 3ms
+[10:37:08.875] Server  LOG     ✓ Compiled in 4ms
+[10:40:26.437] Server  LOG     ✓ Compiled in 5ms
+[10:41:03.459] Server  LOG     ✓ Compiled in 7ms
+[10:42:29.614] Server  LOG     ✓ Compiled in 7ms
+[10:43:01.842] Server  LOG     ✓ Compiled in 3ms
+[10:44:27.245] Server  LOG     ✓ Compiled in 4ms
+[10:44:53.985] Server  LOG     ✓ Compiled in 5ms
+[10:45:43.868] Server  LOG     ✓ Compiled in 3ms
+[10:45:49.723] Server  LOG     ✓ Compiled in 3ms
+[10:47:06.970] Server  LOG     ✓ Compiled in 3ms
+[10:47:22.716] Server  LOG     ✓ Compiled in 18ms
+[10:48:12.229] Server  LOG     ✓ Compiled in 16ms
+[10:48:57.639] Server  LOG     ✓ Compiled in 3ms
+[10:49:07.371] Server  LOG     ✓ Compiled in 2ms
+[10:49:34.002] Server  LOG     ✓ Compiled in 7ms
+[10:51:00.743] Server  LOG     ✓ Compiled in 7ms
+[10:51:42.039] Server  LOG     ✓ Compiled in 3ms
+[10:52:07.064] Server  LOG     ✓ Compiled in 2ms
+[10:52:15.525] Server  LOG     ✓ Compiled in 3ms
+[10:53:03.991] Server  LOG     ✓ Compiled in 3ms
+[10:54:01.740] Server  LOG     ✓ Compiled in 3ms
+[10:54:10.192] Server  LOG     ✓ Compiled in 3ms
+[11:30:23.389] Server  LOG     ✓ Compiled in 13ms
+[11:30:37.188] Server  LOG     ✓ Compiled in 4ms
+[11:32:40.157] Server  LOG     ✓ Compiled in 41ms
+[11:32:50.835] Server  LOG     ✓ Compiled in 4ms
+[11:33:25.276] Server  LOG     ✓ Compiled in 3ms
+[11:33:28.419] Server  LOG     ✓ Compiled in 6ms
+[11:34:27.197] Server  LOG     ✓ Compiled in 8ms
+[11:35:31.258] Server  LOG     ✓ Compiled in 4ms
+[11:36:08.691] Server  LOG     ✓ Compiled in 4ms
+[11:36:15.148] Server  LOG     ✓ Compiled in 4ms
+[11:36:38.683] Server  LOG     ✓ Compiled in 4ms
+[11:36:52.694] Server  LOG     ✓ Compiled in 5ms
+[11:38:00.894] Server  LOG     ✓ Compiled in 11ms
+[11:40:05.519] Server  LOG     ✓ Compiled in 7ms
+[11:40:45.728] Server  LOG     ✓ Compiled in 3ms
+[11:41:55.058] Server  LOG     ✓ Compiled in 4ms
+[11:51:03.451] Server  LOG     ✓ Compiled in 14ms
+[11:51:14.278] Server  LOG     ✓ Compiled in 4ms
+[11:52:31.579] Server  LOG     ✓ Compiled in 4ms
+[11:53:00.727] Server  LOG     ✓ Compiled in 3ms
+[11:53:16.574] Server  LOG     ✓ Compiled in 3ms
+[11:53:20.673] Server  LOG     ✓ Compiled in 4ms
+[11:54:56.169] Server  LOG     ✓ Compiled in 4ms
+[11:55:39.671] Server  LOG     ✓ Compiled in 7ms
+[11:57:03.413] Server  LOG     ✓ Compiled in 4ms
+[11:57:08.546] Server  LOG     ✓ Compiled in 4ms
+[11:58:08.677] Server  LOG     ✓ Compiled in 7ms
+[11:58:34.753] Server  LOG     ✓ Compiled in 4ms
+[11:58:58.782] Server  LOG     ✓ Compiled in 30ms
+[11:59:03.455] Server  LOG     ✓ Compiled in 3ms
+[11:59:08.439] Server  LOG     ✓ Compiled in 3ms
+[12:04:50.348] Server  LOG     ✓ Compiled in 9ms
+[12:05:09.634] Server  LOG     ✓ Compiled in 4ms
+[12:05:56.396] Server  LOG     ✓ Compiled in 11ms
