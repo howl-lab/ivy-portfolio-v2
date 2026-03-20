@@ -318,7 +318,7 @@ export default function HomePage() {
             <p
               style={{
                 fontFamily: PT_SANS,
-                fontSize: "clamp(14px, 1.2vw, 16px)",
+                fontSize: "clamp(16px, 1.2vw, 18px)",
                 color: "#111",
                 marginBottom: 8,
               }}
@@ -339,7 +339,7 @@ export default function HomePage() {
             <p
               style={{
                 fontFamily: PT_SANS,
-                fontSize: "clamp(13px, 1.1vw, 15px)",
+                fontSize: "clamp(16px, 1.1vw, 18px)",
                 color: "#111",
                 minHeight: "1.6em",
               }}

@@ -227,3 +227,72 @@ Import traces:
 [12:05:09.634] Server  LOG     ✓ Compiled in 4ms
 [12:05:56.396] Server  LOG     ✓ Compiled in 11ms
 [12:37:10.081] Server  LOG     ✓ Compiled in 12ms
+[12:39:02.700] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[12:44:00.025] Server  LOG     ✓ Compiled in 249ms
+[12:45:51.584] Server  LOG     ✓ Compiled in 24ms
+[12:47:31.829] Server  LOG     ✓ Compiled in 6ms
+[12:47:51.825] Server  LOG     ✓ Compiled in 3ms
+[12:48:28.965] Server  LOG     ✓ Compiled in 4ms
+[12:48:35.947] Server  LOG     ✓ Compiled in 5ms
+[12:48:52.814] Server  LOG     ✓ Compiled in 4ms
+[12:49:52.399] Server  LOG     ✓ Compiled in 10ms
+[12:50:04.901] Server  LOG     ✓ Compiled in 9ms
+[12:50:18.382] Server  LOG     ✓ Compiled in 4ms
+[12:50:25.732] Server  LOG     ✓ Compiled in 3ms
+[12:50:35.763] Server  LOG     ✓ Compiled in 4ms
+[12:51:25.196] Server  LOG     ✓ Compiled in 4ms
+[12:51:33.592] Server  LOG     ✓ Compiled in 4ms
+[12:53:20.811] Server  LOG     ✓ Compiled in 4ms
+[12:53:55.659] Server  LOG     ✓ Compiled in 4ms
+[12:55:27.934] Server  LOG     ✓ Compiled in 8ms
+[12:55:50.057] Server  LOG     ✓ Compiled in 4ms
+[12:58:10.166] Server  LOG     ✓ Compiled in 6ms
+[12:59:38.741] Server  LOG     ✓ Compiled in 3ms
+[13:00:11.582] Server  LOG     ✓ Compiled in 4ms
+[13:00:46.858] Server  LOG     ✓ Compiled in 8ms
+[13:03:33.995] Server  LOG     ✓ Compiled in 9ms
+[13:09:03.296] Server  LOG     ✓ Compiled in 15ms
+[13:10:41.906] Server  LOG     ✓ Compiled in 4ms
+[13:11:26.475] Server  LOG     ✓ Compiled in 16ms
+[13:12:00.047] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[13:12:25.032] Server  LOG     ✓ Compiled in 8ms
+[13:12:27.864] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[13:12:48.631] Server  LOG     ✓ Compiled in 11ms
+[13:13:43.208] Server  LOG     ✓ Compiled in 4ms
+[13:13:55.499] Server  LOG     ✓ Compiled in 3ms
+[13:14:22.974] Server  LOG     ✓ Compiled in 4ms
+[13:14:34.743] Server  LOG     ✓ Compiled in 4ms
+[13:15:08.878] Server  LOG     ✓ Compiled in 5ms
+[13:15:14.976] Server  LOG     ✓ Compiled in 4ms
+[13:15:48.342] Server  LOG     ✓ Compiled in 3ms
+[13:16:35.634] Server  LOG     ✓ Compiled in 4ms
+[13:17:55.686] Server  LOG     ✓ Compiled in 10ms
+[13:19:42.973] Server  LOG     ✓ Compiled in 8ms
+[13:20:32.351] Server  LOG     ✓ Compiled in 9ms
+[13:20:32.458] Browser ERROR   ./src/app/data/projects.ts:490:25
+Parsing ecmascript source code failed
+  488 |         subCard: {
+  489 |           title: "",
+> 490 |           expandedText: "Most digital mathematic symbols are rendered using LaTeX font \n \n Rendering with LaTeX has its limits: \n The font showed up wonky when applied raw against the native system font \n LaTeX was not designed to be interactive \n \n 
+      |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  491 |
+  492 | Design solutions:
+  493 |
+
+Unterminated string constant
+
+Import traces:
+  Client Component Browser:
+    ./src/app/data/projects.ts [Client Component Browser]
+    ./src/app/[projectId]/page.tsx [Client Component Browser]
+    ./src/app/[projectId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/data/projects.ts [Client Component SSR]
+    ./src/app/[projectId]/page.tsx [Client Component SSR]
+    ./src/app/[projectId]/page.tsx [Server Component]
+[13:21:31.209] Server  LOG     ✓ Compiled in 4ms
+[13:21:59.471] Server  LOG     ✓ Compiled in 4ms
+[13:23:43.321] Server  LOG     ✓ Compiled in 4ms
+[13:23:58.064] Server  LOG     ✓ Compiled in 5ms
+[13:24:13.151] Server  LOG     ✓ Compiled in 4ms

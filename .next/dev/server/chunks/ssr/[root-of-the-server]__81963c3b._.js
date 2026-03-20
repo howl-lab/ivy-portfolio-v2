@@ -357,12 +357,12 @@ const PROJECTS = [
             "app"
         ],
         summary: [
-            "Rebranding the AI-powered app, ",
+            "I led visual design on the Socratic team to rebrand the AI-powered app, ",
             {
                 text: "Socratic",
                 url: "https://en.wikipedia.org/wiki/Socratic_(Google)"
             },
-            ", to help students with their homework by providing educational resources like videos, definitions, Q&A, links and more \n \n Launched 2019: ",
+            ", that help students with their homework by providing educational resources like videos, definitions, Q&A, links and more \n \n Launched 2019: ",
             {
                 text: "Google's blog",
                 url: "https://blog.google/products-and-platforms/products/education/socratic-by-google/#:~:text=To%20help%20students%20working%20on,them%20work%20through%20their%20questions."
@@ -372,7 +372,7 @@ const PROJECTS = [
                 text: "TIME",
                 url: "https://time.com/4650119/socratic-app-homework-iphone/"
             },
-            ". App sunsetted 2024."
+            ". \n Socratic moved to the Google app in 2024."
         ],
         sidebar: {
             problem: "Regular Google search can be daunting for younger learners and Google just acquired an AI educational app called Socratic",
@@ -383,8 +383,8 @@ const PROJECTS = [
         contributions: [
             {
                 title: "Visual styleguide",
-                cardTitle: "Established visual styleguide",
-                expandedText: "Rebrand the app to feel Googley and fun; make the new app feel like part of Google's product ecosystem \n Ensured the system is scaleable; paired graphic and text concepts across learning content",
+                cardTitle: "Refreshed visual language + defined styleguide",
+                expandedText: "• Rebrand the app to feel Googley and fun \n • Ensured the system is scaleable \n • Developed delightful tone and colorful for Gen Z and Alpha audiences \n • Harmonized with the rest of Google's products \n Paired graphic and text concepts across learning content \n Created a custom font in 2 weeks to be used for content creation",
                 expandedImages: [
                     {
                         src: "/images/socratic/socratic1.jpg",
@@ -392,11 +392,11 @@ const PROJECTS = [
                     },
                     {
                         src: "/images/socratic/socratic2.mp4",
-                        caption: "I created a brand new custom font within 2 weeks for content creation so the team had full control of characters and symbols"
+                        caption: "Problem: most fonts do not offer full coverage of symbols and characters, esp. when it comes to math and the sciences. Design solution: I custom made one so the team has full control and coverage"
                     },
                     {
                         src: "/images/socratic/socratic3.jpg",
-                        caption: "Created a complimentary theme for Socratic from Google Material's color guideline"
+                        caption: "Distilled a complimentary theme for Socratic from Google Material's color guideline"
                     }
                 ],
                 subCard: {
@@ -415,9 +415,9 @@ const PROJECTS = [
                 }
             },
             {
-                title: "Content creation",
-                cardTitle: "First-party content creation",
-                expandedText: "Led another visual designer and worked directly with pedagogy experts on first party content creation. In the span of 4 months, we created over 900 explainer cards across subjects like math, science, physics, biology, and history. 30-40% of usage surfaced an explainer card.",
+                title: "First-party content creation",
+                cardTitle: "",
+                expandedText: "Led another visual designer and worked directly with pedagogy experts on first party content creation. \n \n • In the span of 4 months, we created over 900 explainer cards across subjects like math, science, physics, biology, and history \n • 30-40% of usage surfaced an explainer card",
                 expandedImages: [
                     {
                         src: "/images/socratic/socratic-content1.jpg",
@@ -428,29 +428,39 @@ const PROJECTS = [
                         caption: "Designed for readability and understandability on vertical mobile space"
                     },
                     {
+                        src: "/images/socratic/socratic-content3.jpg",
+                        caption: "left to right: browse by subject, dive into topics within subject, detail learning about topic"
+                    },
+                    {
                         src: "/images/socratic/socratic-content3.mp4",
                         caption: "Snippet of final product"
                     }
                 ]
             },
             {
-                title: "Math keyboard",
-                cardTitle: "Custom math keyboard",
-                expandedText: "Socratic & Lens are both Google products that used cameras as main source of input. Sometimes, the OCR technology would fail. This caused students to get stuck in their end-to-end journey or experience bad query results. \n \n Led design work and cross-team alignments on a custom math keyboard so that students can manually address OCR errors.",
+                title: "Custom math keyboard",
+                cardTitle: "",
+                expandedText: "Socratic & Lens are both Google products that used camera as main source of input. \n \n Problem: sometime, the OCR (Optical Characrer Recognization) technology would fail. This caused students to get stuck in their end-to-end journey or experience bad query results. \n \n Design solution: led design work and cross-team alignments on a custom math keyboard so that students can manually address OCR errors",
                 expandedImages: [
                     {
                         src: "/images/socratic/socratic-keyboard1.mp4",
                         caption: "Adoption into Google Search (eg. search math solver) in 2025"
-                    },
-                    {
-                        src: "/images/socratic/socratic-keyboard2.mp4",
-                        caption: "Closely collaborated with engineering to implement and troubleshoot functionality (eg. LaTex font) and UXR team to guide design interactions (eg. cursor UX)"
-                    },
-                    {
-                        src: "/images/socratic/socratic-keyboard3.jpg",
-                        caption: "Snippet of final feature released on Lens in 2020"
                     }
-                ]
+                ],
+                subCard: {
+                    title: "",
+                    expandedText: "Most digital mathematic symbols are rendered using LaTeX font \n \n Rendering with LaTeX has its limits: \n • The font showed up wonky when applied raw against the native system font \n • LaTeX was not designed to be interactive \n \n Design solutions: Recycled LaTeX to create versions of symbol made for editing \n • Testing the cursor movement implementation \n • Turned to UXR with studies on cursor and keyboards (mobile UX)",
+                    expandedImages: [
+                        {
+                            src: "/images/socratic/socratic-keyboard2.mp4",
+                            caption: "Closely collaborated with engineering to implement and troubleshoot functionality"
+                        },
+                        {
+                            src: "/images/socratic/socratic-keyboard3.jpg",
+                            caption: "Snippet of final feature released on Lens in 2020"
+                        }
+                    ]
+                }
             }
         ]
     }

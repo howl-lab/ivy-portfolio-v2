@@ -123,7 +123,7 @@ export const HOME_PROJECTS: HomeProject[] = [
     label: "Socratic",
     tags: ["rebrand", "education", "Google", "mobile"],
     cardDescription:
-      "Rebranded the AI-powered Google app helping students with homework — 4.9★, grew from 120K to 750K DAU.",
+      "Rebranding the AI-powered app to help students with their homework by providing educational resources",
     contributions: [
       {
         title: "Established visual styleguide",

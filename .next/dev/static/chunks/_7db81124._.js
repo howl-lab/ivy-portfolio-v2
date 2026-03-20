@@ -233,7 +233,7 @@ const HOME_PROJECTS = [
             "Google",
             "mobile"
         ],
-        cardDescription: "Rebranded the AI-powered Google app helping students with homework — 4.9★, grew from 120K to 750K DAU.",
+        cardDescription: "Rebranding the AI-powered app to help students with their homework by providing educational resources",
         contributions: [
             {
                 title: "Established visual styleguide",
@@ -309,11 +309,11 @@ const EXPERIENCE = [
 // ─── Pine tree SVG ──────────────────────────────────────────────────────────
 function PineTree(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(6);
-    if ($[0] !== "8cf968a3ecdc989ad0ba9f7278b5c14686cf8bf457febfa3ebeaa9257640335d") {
+    if ($[0] !== "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057") {
         for(let $i = 0; $i < 6; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "8cf968a3ecdc989ad0ba9f7278b5c14686cf8bf457febfa3ebeaa9257640335d";
+        $[0] = "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057";
     }
     const { size: t1 } = t0;
     const size = t1 === undefined ? 28 : t1;
@@ -407,11 +407,11 @@ const TREES = [
 // ─── Media helper ───────────────────────────────────────────────────────────
 function Media(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(6);
-    if ($[0] !== "8cf968a3ecdc989ad0ba9f7278b5c14686cf8bf457febfa3ebeaa9257640335d") {
+    if ($[0] !== "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057") {
         for(let $i = 0; $i < 6; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "8cf968a3ecdc989ad0ba9f7278b5c14686cf8bf457febfa3ebeaa9257640335d";
+        $[0] = "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057";
     }
     const { src, style } = t0;
     if (!src) {
@@ -466,11 +466,11 @@ _c1 = Media;
 // ─── About modal ────────────────────────────────────────────────────────────
 function AboutModal(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(5);
-    if ($[0] !== "8cf968a3ecdc989ad0ba9f7278b5c14686cf8bf457febfa3ebeaa9257640335d") {
+    if ($[0] !== "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057") {
         for(let $i = 0; $i < 5; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "8cf968a3ecdc989ad0ba9f7278b5c14686cf8bf457febfa3ebeaa9257640335d";
+        $[0] = "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057";
     }
     const { onClose } = t0;
     let t1;
@@ -652,11 +652,11 @@ function _AboutModalDivOnClick(e) {
 function ProjectCard(t0) {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(50);
-    if ($[0] !== "8cf968a3ecdc989ad0ba9f7278b5c14686cf8bf457febfa3ebeaa9257640335d") {
+    if ($[0] !== "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057") {
         for(let $i = 0; $i < 50; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "8cf968a3ecdc989ad0ba9f7278b5c14686cf8bf457febfa3ebeaa9257640335d";
+        $[0] = "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057";
     }
     const { project } = t0;
     const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
@@ -999,11 +999,11 @@ _c3 = ProjectCard;
 function HomePage() {
     _s1();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(11);
-    if ($[0] !== "8cf968a3ecdc989ad0ba9f7278b5c14686cf8bf457febfa3ebeaa9257640335d") {
+    if ($[0] !== "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057") {
         for(let $i = 0; $i < 11; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "8cf968a3ecdc989ad0ba9f7278b5c14686cf8bf457febfa3ebeaa9257640335d";
+        $[0] = "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057";
     }
     const [aboutOpen, setAboutOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     let t0;
@@ -1033,7 +1033,7 @@ function HomePage() {
         };
         t4 = {
             fontFamily: PT_SANS,
-            fontSize: "clamp(14px, 1.2vw, 16px)",
+            fontSize: "clamp(16px, 1.2vw, 18px)",
             color: "#111",
             marginBottom: 8
         };
@@ -1091,7 +1091,7 @@ function HomePage() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     style: {
                                         fontFamily: PT_SANS,
-                                        fontSize: "clamp(13px, 1.1vw, 15px)",
+                                        fontSize: "clamp(16px, 1.1vw, 18px)",
                                         color: "#111",
                                         minHeight: "1.6em"
                                     },
