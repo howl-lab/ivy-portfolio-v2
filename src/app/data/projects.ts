@@ -115,7 +115,7 @@ export const PROJECTS: Project[] = [
         },
       },
       {
-        title: "Conversation UI",
+        title: "Conversation interface",
         cardTitle: "Conversation interface",
         expandedText:
           "Worked with various technical limitations and designed a product focused on user creation \n • Based on 350 sample users: 82% reach 10m on desktop vs. 42% on mobile \n • To reduce cost, the product shifted from video-first to text and voice-first with video generation features in text mode (eg. $0.75 per 5s video vs. $0.08 per image)",
@@ -316,7 +316,7 @@ export const PROJECTS: Project[] = [
     },
     contributions: [
       {
-        title: "Architectured artist information",
+        title: "Architectured artist data",
         cardTitle: "",
         expandedText:
           "14 artists representing 'a new generation of artists working in a world of expanded media. \n A big question for the project was: 'How do we represent what was normally live in digital form?'",
@@ -339,7 +339,7 @@ export const PROJECTS: Project[] = [
         ],
       },
       {
-        title: "Elements of Storytelling",
+        title: "Elements of storytelling",
         cardTitle: "Capturing what the award and exhibition is about",
         expandedText:
           "Two comments from the museum led  the storytelling direction I went on to define: \n 1. MAD's curations of the exhibition evoke sense of participation over possession \n 2. Craft is a journey, so the time and labor are as much part of the process as the finished pieces",
@@ -404,7 +404,7 @@ export const PROJECTS: Project[] = [
       proposal:
         "Rebrand the app as a learning-focused search by Google, ready for back to school in fall",
       outcome:
-        "Launched: August 2019. 4.9 ⭐️ on app store. Daily active users from 120K in Sept. 2019 to 750K in April 2020 (+525%). Sunsetted: October 2024",
+        "Launched: August 2019. 4.9 ⭐️ on app store. Daily active users from 120K in Sept. 2019 to 750K in April 2020 (+525%)",
     },
     contributions: [
       {

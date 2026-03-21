@@ -83,7 +83,7 @@ const PROJECTS = [
                 }
             },
             {
-                title: "Conversation UI",
+                title: "Conversation interface",
                 cardTitle: "Conversation interface",
                 expandedText: "Worked with various technical limitations and designed a product focused on user creation \n • Based on 350 sample users: 82% reach 10m on desktop vs. 42% on mobile \n • To reduce cost, the product shifted from video-first to text and voice-first with video generation features in text mode (eg. $0.75 per 5s video vs. $0.08 per image)",
                 expandedImages: [
@@ -279,7 +279,7 @@ const PROJECTS = [
         },
         contributions: [
             {
-                title: "Architectured artist information",
+                title: "Architectured artist data",
                 cardTitle: "",
                 expandedText: "14 artists representing 'a new generation of artists working in a world of expanded media. \n A big question for the project was: 'How do we represent what was normally live in digital form?'",
                 expandedImages: [
@@ -298,7 +298,7 @@ const PROJECTS = [
                 ]
             },
             {
-                title: "Elements of Storytelling",
+                title: "Elements of storytelling",
                 cardTitle: "Capturing what the award and exhibition is about",
                 expandedText: "Two comments from the museum led  the storytelling direction I went on to define: \n 1. MAD's curations of the exhibition evoke sense of participation over possession \n 2. Craft is a journey, so the time and labor are as much part of the process as the finished pieces",
                 expandedImages: [
@@ -360,7 +360,7 @@ const PROJECTS = [
             problem: "Regular Google search can be daunting for younger learners and Google just acquired an AI educational app called Socratic",
             why: "The app uses a combination of OCR, AI and machine learning to surface relevant learning resources (eg. websites, videos, links) for students",
             proposal: "Rebrand the app as a learning-focused search by Google, ready for back to school in fall",
-            outcome: "Launched: August 2019. 4.9 ⭐️ on app store. Daily active users from 120K in Sept. 2019 to 750K in April 2020 (+525%). Sunsetted: October 2024"
+            outcome: "Launched: August 2019. 4.9 ⭐️ on app store. Daily active users from 120K in Sept. 2019 to 750K in April 2020 (+525%)"
         },
         contributions: [
             {
@@ -483,11 +483,11 @@ const COURIER = '"TT Commons Pro Mono", monospace';
 // ─── Media helper ────────────────────────────────────────────────────────────
 function Media(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(6);
-    if ($[0] !== "db9f6fd8d972e8c05d13864a18bef83cbf305b9da66e68b298cfa052d4d895e7") {
+    if ($[0] !== "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2") {
         for(let $i = 0; $i < 6; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "db9f6fd8d972e8c05d13864a18bef83cbf305b9da66e68b298cfa052d4d895e7";
+        $[0] = "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2";
     }
     const { src, style } = t0;
     if (!src) {
@@ -542,16 +542,16 @@ _c = Media;
 // ─── Project Context modal ───────────────────────────────────────────────────
 function ProjectContextModal(t0) {
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(22);
-    if ($[0] !== "db9f6fd8d972e8c05d13864a18bef83cbf305b9da66e68b298cfa052d4d895e7") {
-        for(let $i = 0; $i < 22; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(33);
+    if ($[0] !== "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2") {
+        for(let $i = 0; $i < 33; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "db9f6fd8d972e8c05d13864a18bef83cbf305b9da66e68b298cfa052d4d895e7";
+        $[0] = "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2";
     }
     const { sidebar, onClose, anchorRef } = t0;
-    const [pos, setPos] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    const [isMobile, setIsMobile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [desktopPos, setDesktopPos] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [isMobile, setIsMobile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     let t1;
     let t2;
     if ($[1] !== anchorRef) {
@@ -559,26 +559,15 @@ function ProjectContextModal(t0) {
             "ProjectContextModal[useEffect()]": ()=>{
                 const update = {
                     "ProjectContextModal[useEffect() > update]": ()=>{
-                        if (window.innerWidth < 640) {
-                            setIsMobile(true);
-                            setPos({
-                                x: 0,
-                                y: 0
+                        const mobile = window.innerWidth < 640;
+                        setIsMobile(mobile);
+                        if (!mobile) {
+                            const x = anchorRef.current ? anchorRef.current.getBoundingClientRect().right - 360 : window.innerWidth - 400;
+                            const y = anchorRef.current ? anchorRef.current.getBoundingClientRect().bottom + 8 : 80;
+                            setDesktopPos({
+                                x,
+                                y
                             });
-                        } else {
-                            setIsMobile(false);
-                            if (anchorRef.current) {
-                                const rect = anchorRef.current.getBoundingClientRect();
-                                setPos({
-                                    x: rect.right - 360,
-                                    y: rect.bottom + 8
-                                });
-                            } else {
-                                setPos({
-                                    x: window.innerWidth - 400,
-                                    y: 80
-                                });
-                            }
                         }
                     }
                 }["ProjectContextModal[useEffect() > update]"];
@@ -598,7 +587,7 @@ function ProjectContextModal(t0) {
         t2 = $[3];
     }
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t1, t2);
-    if (!pos) {
+    if (isMobile === null) {
         return null;
     }
     let t3;
@@ -614,120 +603,57 @@ function ProjectContextModal(t0) {
         t3 = $[4];
     }
     const LABELS = t3;
-    let t4;
-    if ($[5] !== isMobile || $[6] !== pos) {
-        t4 = isMobile ? {
-            position: "fixed",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            zIndex: 9990,
-            background: "#fff",
-            border: "1px solid #ddd",
-            borderRadius: 0,
-            width: "90vw",
-            maxWidth: 360
-        } : {
-            position: "fixed",
-            top: pos.y,
-            left: pos.x,
-            zIndex: 9990,
-            background: "#fff",
-            border: "1px solid #ddd",
-            borderRadius: 0,
-            width: 360,
-            maxWidth: "90vw"
-        };
-        $[5] = isMobile;
-        $[6] = pos;
-        $[7] = t4;
-    } else {
-        t4 = $[7];
-    }
-    let t5;
+    const t4 = isMobile ? "90vw" : 360;
+    const t5 = isMobile ? 400 : "90vw";
     let t6;
-    if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
-        t5 = {
-            padding: "14px 20px",
-            borderBottom: "1px solid #eee",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center"
+    if ($[5] !== desktopPos?.x || $[6] !== desktopPos?.y || $[7] !== isMobile) {
+        t6 = isMobile ? {} : {
+            position: "fixed",
+            top: desktopPos?.y ?? 80,
+            left: desktopPos?.x ?? window.innerWidth - 400,
+            zIndex: 9990
         };
-        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            style: {
-                fontFamily: PT_SANS,
-                fontWeight: 700,
-                fontSize: 14,
-                color: "#111",
-                letterSpacing: "0.05em",
-                textTransform: "uppercase"
-            },
-            children: "Project Context"
-        }, void 0, false, {
-            fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 170,
-            columnNumber: 10
-        }, this);
-        $[8] = t5;
-        $[9] = t6;
+        $[5] = desktopPos?.x;
+        $[6] = desktopPos?.y;
+        $[7] = isMobile;
+        $[8] = t6;
     } else {
-        t5 = $[8];
-        t6 = $[9];
+        t6 = $[8];
     }
     let t7;
-    if ($[10] === Symbol.for("react.memo_cache_sentinel")) {
+    if ($[9] !== t4 || $[10] !== t5 || $[11] !== t6) {
         t7 = {
-            background: "none",
-            border: "none",
-            cursor: "none",
-            color: "#888",
-            fontSize: 16,
-            lineHeight: 1,
-            padding: "0 2px"
+            background: "#fff",
+            border: "1px solid #0015ff",
+            borderRadius: 0,
+            width: t4,
+            maxWidth: t5,
+            maxHeight: "80vh",
+            display: "flex",
+            flexDirection: "column",
+            ...t6
         };
-        $[10] = t7;
+        $[9] = t4;
+        $[10] = t5;
+        $[11] = t6;
+        $[12] = t7;
     } else {
-        t7 = $[10];
+        t7 = $[12];
     }
     let t8;
-    if ($[11] !== onClose) {
-        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            style: t5,
-            children: [
-                t6,
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    onClick: onClose,
-                    style: t7,
-                    children: "×"
-                }, void 0, false, {
-                    fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 201,
-                    columnNumber: 30
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 201,
-            columnNumber: 10
-        }, this);
-        $[11] = onClose;
-        $[12] = t8;
+    if ($[13] === Symbol.for("react.memo_cache_sentinel")) {
+        t8 = {
+            padding: "20px 20px 24px",
+            overflowY: "auto",
+            flex: 1
+        };
+        $[13] = t8;
     } else {
-        t8 = $[12];
+        t8 = $[13];
     }
     let t9;
-    if ($[13] === Symbol.for("react.memo_cache_sentinel")) {
-        t9 = {
-            padding: "20px 20px 24px"
-        };
-        $[13] = t9;
-    } else {
-        t9 = $[13];
-    }
-    let t10;
     if ($[14] !== sidebar) {
-        t10 = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$data$2f$projects$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SIDEBAR_ITEMS"].map({
+        t9 = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$data$2f$projects$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SIDEBAR_ITEMS"].map({
             "ProjectContextModal[SIDEBAR_ITEMS.map()]": (key)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     style: {
                         marginBottom: 20
@@ -744,7 +670,7 @@ function ProjectContextModal(t0) {
                             children: LABELS[key]
                         }, void 0, false, {
                             fileName: "[project]/src/app/[projectId]/page.tsx",
-                            lineNumber: 221,
+                            lineNumber: 172,
                             columnNumber: 10
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -757,69 +683,159 @@ function ProjectContextModal(t0) {
                             children: sidebar[key]
                         }, void 0, false, {
                             fileName: "[project]/src/app/[projectId]/page.tsx",
-                            lineNumber: 227,
+                            lineNumber: 178,
                             columnNumber: 29
                         }, this)
                     ]
                 }, key, true, {
                     fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 219,
+                    lineNumber: 170,
                     columnNumber: 58
                 }, this)
         }["ProjectContextModal[SIDEBAR_ITEMS.map()]"]);
         $[14] = sidebar;
-        $[15] = t10;
+        $[15] = t9;
     } else {
-        t10 = $[15];
+        t9 = $[15];
+    }
+    let t10;
+    if ($[16] !== t9) {
+        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            style: t8,
+            children: t9
+        }, void 0, false, {
+            fileName: "[project]/src/app/[projectId]/page.tsx",
+            lineNumber: 192,
+            columnNumber: 11
+        }, this);
+        $[16] = t9;
+        $[17] = t10;
+    } else {
+        t10 = $[17];
     }
     let t11;
-    if ($[16] !== t10) {
+    if ($[18] !== t10 || $[19] !== t7) {
         t11 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            style: t9,
+            className: "modal-card",
+            style: t7,
             children: t10
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 241,
+            lineNumber: 200,
             columnNumber: 11
         }, this);
-        $[16] = t10;
-        $[17] = t11;
+        $[18] = t10;
+        $[19] = t7;
+        $[20] = t11;
     } else {
-        t11 = $[17];
+        t11 = $[20];
+    }
+    const card = t11;
+    if (isMobile) {
+        let t12;
+        if ($[21] === Symbol.for("react.memo_cache_sentinel")) {
+            t12 = {
+                position: "fixed",
+                inset: 0,
+                zIndex: 9990,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "20px"
+            };
+            $[21] = t12;
+        } else {
+            t12 = $[21];
+        }
+        let t13;
+        if ($[22] !== card) {
+            t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                onClick: _ProjectContextModalDivOnClick,
+                children: card
+            }, void 0, false, {
+                fileName: "[project]/src/app/[projectId]/page.tsx",
+                lineNumber: 226,
+                columnNumber: 13
+            }, this);
+            $[22] = card;
+            $[23] = t13;
+        } else {
+            t13 = $[23];
+        }
+        let t14;
+        if ($[24] !== onClose || $[25] !== t13) {
+            t14 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                onClick: onClose,
+                style: t12,
+                children: t13
+            }, void 0, false, {
+                fileName: "[project]/src/app/[projectId]/page.tsx",
+                lineNumber: 234,
+                columnNumber: 13
+            }, this);
+            $[24] = onClose;
+            $[25] = t13;
+            $[26] = t14;
+        } else {
+            t14 = $[26];
+        }
+        return t14;
     }
     let t12;
-    if ($[18] !== t11 || $[19] !== t4 || $[20] !== t8) {
-        t12 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "modal-card",
-            style: t4,
-            children: [
-                t8,
-                t11
-            ]
-        }, void 0, true, {
+    if ($[27] === Symbol.for("react.memo_cache_sentinel")) {
+        t12 = {
+            position: "fixed",
+            inset: 0,
+            zIndex: 9989
+        };
+        $[27] = t12;
+    } else {
+        t12 = $[27];
+    }
+    let t13;
+    if ($[28] !== onClose) {
+        t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            onClick: onClose,
+            style: t12
+        }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 249,
+            lineNumber: 256,
             columnNumber: 11
         }, this);
-        $[18] = t11;
-        $[19] = t4;
-        $[20] = t8;
-        $[21] = t12;
+        $[28] = onClose;
+        $[29] = t13;
     } else {
-        t12 = $[21];
+        t13 = $[29];
     }
-    return t12;
+    let t14;
+    if ($[30] !== card || $[31] !== t13) {
+        t14 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+            children: [
+                t13,
+                card
+            ]
+        }, void 0, true);
+        $[30] = card;
+        $[31] = t13;
+        $[32] = t14;
+    } else {
+        t14 = $[32];
+    }
+    return t14;
 }
-_s(ProjectContextModal, "for/g8nJXj9e/6LyWheXHS4OQbE=");
+_s(ProjectContextModal, "BH1oQr/vQrFmCyE69d3XBB4ZW7I=");
 _c1 = ProjectContextModal;
 // ─── Contribution content card ────────────────────────────────────────────────
+function _ProjectContextModalDivOnClick(e) {
+    return e.stopPropagation();
+}
 function ContributionCard(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(20);
-    if ($[0] !== "db9f6fd8d972e8c05d13864a18bef83cbf305b9da66e68b298cfa052d4d895e7") {
+    if ($[0] !== "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2") {
         for(let $i = 0; $i < 20; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "db9f6fd8d972e8c05d13864a18bef83cbf305b9da66e68b298cfa052d4d895e7";
+        $[0] = "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2";
     }
     const { contribution } = t0;
     let t1;
@@ -860,7 +876,7 @@ function ContributionCard(t0) {
             children: t4
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 305,
+            lineNumber: 322,
             columnNumber: 10
         }, this);
         $[4] = t4;
@@ -890,7 +906,7 @@ function ContributionCard(t0) {
             children: contribution.expandedText
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 328,
+            lineNumber: 345,
             columnNumber: 10
         }, this);
         $[7] = contribution.expandedText;
@@ -909,7 +925,7 @@ function ContributionCard(t0) {
             children: contribution.expandedImages.map(_ContributionCardContributionExpandedImagesMap)
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 336,
+            lineNumber: 353,
             columnNumber: 41
         }, this);
         $[9] = contribution.expandedImages;
@@ -928,7 +944,7 @@ function ContributionCard(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 348,
+            lineNumber: 365,
             columnNumber: 10
         }, this);
         $[11] = t5;
@@ -959,7 +975,7 @@ function ContributionCard(t0) {
                     children: contribution.subCard.title
                 }, void 0, false, {
                     fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 363,
+                    lineNumber: 380,
                     columnNumber: 8
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -975,7 +991,7 @@ function ContributionCard(t0) {
                     children: contribution.subCard.expandedText
                 }, void 0, false, {
                     fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 369,
+                    lineNumber: 386,
                     columnNumber: 43
                 }, this),
                 contribution.subCard.expandedImages && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -987,13 +1003,13 @@ function ContributionCard(t0) {
                     children: contribution.subCard.expandedImages.map(_ContributionCardContributionSubCardExpandedImagesMap)
                 }, void 0, false, {
                     fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 377,
+                    lineNumber: 394,
                     columnNumber: 89
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 358,
+            lineNumber: 375,
             columnNumber: 35
         }, this);
         $[15] = contribution.subCard;
@@ -1011,7 +1027,7 @@ function ContributionCard(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 389,
+            lineNumber: 406,
             columnNumber: 11
         }, this);
         $[17] = t10;
@@ -1042,12 +1058,12 @@ function _ContributionCardContributionSubCardExpandedImagesMap(img_0, i_0) {
                     src: img_0.src
                 }, void 0, false, {
                     fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 409,
+                    lineNumber: 426,
                     columnNumber: 8
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 403,
+                lineNumber: 420,
                 columnNumber: 6
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1061,13 +1077,13 @@ function _ContributionCardContributionSubCardExpandedImagesMap(img_0, i_0) {
                 children: img_0.caption
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 409,
+                lineNumber: 426,
                 columnNumber: 39
             }, this)
         ]
     }, i_0, true, {
         fileName: "[project]/src/app/[projectId]/page.tsx",
-        lineNumber: 401,
+        lineNumber: 418,
         columnNumber: 10
     }, this);
 }
@@ -1089,12 +1105,12 @@ function _ContributionCardContributionExpandedImagesMap(img, i) {
                     src: img.src
                 }, void 0, false, {
                     fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 426,
+                    lineNumber: 443,
                     columnNumber: 8
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 420,
+                lineNumber: 437,
                 columnNumber: 6
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1108,24 +1124,24 @@ function _ContributionCardContributionExpandedImagesMap(img, i) {
                 children: img.caption
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 426,
+                lineNumber: 443,
                 columnNumber: 37
             }, this)
         ]
     }, i, true, {
         fileName: "[project]/src/app/[projectId]/page.tsx",
-        lineNumber: 418,
+        lineNumber: 435,
         columnNumber: 10
     }, this);
 }
 function CaseStudyPage() {
     _s1();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(37);
-    if ($[0] !== "db9f6fd8d972e8c05d13864a18bef83cbf305b9da66e68b298cfa052d4d895e7") {
+    if ($[0] !== "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2") {
         for(let $i = 0; $i < 37; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "db9f6fd8d972e8c05d13864a18bef83cbf305b9da66e68b298cfa052d4d895e7";
+        $[0] = "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2";
     }
     const params = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"])();
     const projectId = params?.projectId;
@@ -1182,12 +1198,12 @@ function CaseStudyPage() {
                     children: "Project not found."
                 }, void 0, false, {
                     fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 489,
+                    lineNumber: 506,
                     columnNumber: 10
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 483,
+                lineNumber: 500,
                 columnNumber: 12
             }, this);
             $[7] = t3;
@@ -1220,11 +1236,11 @@ function CaseStudyPage() {
                 top: 24,
                 left: "50%",
                 transform: "translateX(-50%)",
-                fontFamily: PT_SANS,
+                fontFamily: COURIER,
                 fontSize: 14,
                 color: "#888",
                 textDecoration: "none",
-                transition: "color 0.15s",
+                transition: "text-decoration 0.15s",
                 zIndex: 100,
                 pointerEvents: "auto"
             },
@@ -1233,7 +1249,7 @@ function CaseStudyPage() {
             children: "← back home"
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 513,
+            lineNumber: 530,
             columnNumber: 10
         }, this);
         t5 = {
@@ -1247,7 +1263,7 @@ function CaseStudyPage() {
             }
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 531,
+            lineNumber: 548,
             columnNumber: 10
         }, this);
         t7 = {
@@ -1320,7 +1336,7 @@ function CaseStudyPage() {
             children: "Project Context"
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 596,
+            lineNumber: 613,
             columnNumber: 11
         }, this);
         $[18] = t10;
@@ -1348,7 +1364,7 @@ function CaseStudyPage() {
             children: "My Contributions"
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 611,
+            lineNumber: 628,
             columnNumber: 11
         }, this);
         t16 = {
@@ -1394,7 +1410,7 @@ function CaseStudyPage() {
                     children: c.title
                 }, c.title, false, {
                     fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 653,
+                    lineNumber: 670,
                     columnNumber: 65
                 }, this)
         })["CaseStudyPage[project.contributions.map()]"];
@@ -1411,7 +1427,7 @@ function CaseStudyPage() {
             children: t19
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 665,
+            lineNumber: 682,
             columnNumber: 11
         }, this);
         $[27] = t17;
@@ -1426,7 +1442,7 @@ function CaseStudyPage() {
             contribution: activeContribution
         }, activeTab, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 674,
+            lineNumber: 691,
             columnNumber: 11
         }, this);
         $[30] = activeContribution;
@@ -1445,7 +1461,7 @@ function CaseStudyPage() {
             anchorRef: contextBtnRef
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 683,
+            lineNumber: 700,
             columnNumber: 26
         }, this);
         $[33] = contextOpen;
@@ -1473,7 +1489,7 @@ function CaseStudyPage() {
                                         children: project.label
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 693,
+                                        lineNumber: 710,
                                         columnNumber: 71
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1481,20 +1497,20 @@ function CaseStudyPage() {
                                         children: project.tags.map(_CaseStudyPageProjectTagsMap)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 693,
+                                        lineNumber: 710,
                                         columnNumber: 106
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 693,
+                                lineNumber: 710,
                                 columnNumber: 66
                             }, this),
                             t13
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 693,
+                        lineNumber: 710,
                         columnNumber: 50
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1506,13 +1522,13 @@ function CaseStudyPage() {
                                 children: project.summary.map(_CaseStudyPageProjectSummaryMap)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 693,
+                                lineNumber: 710,
                                 columnNumber: 215
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 693,
+                        lineNumber: 710,
                         columnNumber: 193
                     }, this),
                     t20,
@@ -1520,14 +1536,14 @@ function CaseStudyPage() {
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 693,
+                lineNumber: 710,
                 columnNumber: 30
             }, this),
             t22
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/[projectId]/page.tsx",
-        lineNumber: 693,
+        lineNumber: 710,
         columnNumber: 10
     }, this);
 }
@@ -1550,7 +1566,7 @@ function _CaseStudyPageProjectSummaryMap(seg, i) {
         children: seg.text
     }, i, false, {
         fileName: "[project]/src/app/[projectId]/page.tsx",
-        lineNumber: 696,
+        lineNumber: 713,
         columnNumber: 42
     }, this);
 }
@@ -1563,15 +1579,15 @@ function _CaseStudyPageProjectTagsMap(tag) {
         children: tag
     }, tag, false, {
         fileName: "[project]/src/app/[projectId]/page.tsx",
-        lineNumber: 706,
+        lineNumber: 723,
         columnNumber: 10
     }, this);
 }
 function _CaseStudyPageLinkOnMouseLeave(e_0) {
-    return e_0.currentTarget.style.color = "#888";
+    return e_0.currentTarget.style.textDecoration = "none";
 }
 function _CaseStudyPageLinkOnMouseEnter(e) {
-    return e.currentTarget.style.color = "#111";
+    return e.currentTarget.style.textDecoration = "underline";
 }
 var _c, _c1, _c2, _c3;
 __turbopack_context__.k.register(_c, "Media");

@@ -312,3 +312,83 @@ Import traces:
 [25:17:54.670] Server  LOG     ✓ Compiled in 112ms
 [25:19:31.959] Server  LOG     ✓ Compiled in 276ms
 [25:20:16.550] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[28:43:48.688] Server  LOG     ✓ Compiled in 349ms
+[28:43:48.794] Browser ERROR   uncaughtError: ReferenceError: isMobile is not defined
+[28:43:57.895] Server  LOG     ✓ Compiled in 12ms
+[28:43:57.999] Browser ERROR   ./src/app/[projectId]/page.tsx:171:3
+Parsing ecmascript source code failed
+  169 |       </div>
+  170 |     </div>
+> 171 |   );
+      |   ^
+  172 | }
+  173 |
+  174 | // ─── Contribution content card ────────────────────────────────────────────────
+
+Expected '</', got ')'
+
+Import traces:
+  Client Component Browser:
+    ./src/app/[projectId]/page.tsx [Client Component Browser]
+    ./src/app/[projectId]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/[projectId]/page.tsx [Client Component SSR]
+    ./src/app/[projectId]/page.tsx [Server Component]
+[28:44:05.283] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[28:44:05.881] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[28:44:40.249] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[28:47:17.538] Server  LOG     ✓ Compiled in 308ms
+[28:47:49.538] Server  LOG     ✓ Compiled in 283ms
+[28:50:12.823] Server  LOG     ✓ Compiled in 4ms
+[28:50:32.895] Server  LOG     ✓ Compiled in 3ms
+[28:52:00.581] Server  LOG     ✓ Compiled in 12ms
+[29:00:30.812] Server  LOG     ✓ Compiled in 3ms
+[29:01:26.645] Server  LOG     ✓ Compiled in 4ms
+[29:01:52.294] Server  LOG     ✓ Compiled in 3ms
+[29:02:02.205] Server  LOG     ✓ Compiled in 3ms
+[29:03:30.661] Server  LOG     ✓ Compiled in 335ms
+[29:03:33.565] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[29:05:17.469] Server  LOG     ✓ Compiled in 185ms
+[29:07:03.686] Server  LOG     ✓ Compiled in 182ms
+[29:08:49.914] Server  LOG     ✓ Compiled in 183ms
+[29:08:54.766] Server  LOG     ✓ Compiled in 243ms
+[29:17:28.932] Server  LOG     ✓ Compiled in 285ms
+[29:18:45.622] Server  LOG     ✓ Compiled in 234ms
+[29:19:45.961] Server  LOG     ✓ Compiled in 130ms
+[29:20:00.643] Server  LOG     ✓ Compiled in 92ms
+[29:24:28.806] Server  LOG     ✓ Compiled in 59ms
+[29:25:45.924] Server  LOG     ✓ Compiled in 16ms
+[29:26:27.793] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[29:27:05.570] Server  LOG     ✓ Compiled in 14ms
+[29:27:48.103] Server  LOG     ✓ Compiled in 13ms
+[29:27:58.108] Server  LOG     ✓ Compiled in 14ms
+[29:28:14.962] Server  LOG     ✓ Compiled in 19ms
+[29:28:23.250] Server  LOG     ✓ Compiled in 45ms
+[29:28:52.790] Server  LOG     ✓ Compiled in 26ms
+[29:29:00.503] Server  LOG     ✓ Compiled in 20ms
+[29:29:07.559] Server  LOG     ✓ Compiled in 13ms
+[29:30:11.682] Server  LOG     ✓ Compiled in 54ms
+[36:31:50.833] Server  LOG     ✓ Compiled in 230ms
+[36:37:31.424] Server  LOG     ✓ Compiled in 6ms
+[49:04:19.338] Server  LOG     ✓ Compiled in 240ms
+[49:04:25.547] Server  LOG     ✓ Compiled in 18ms
+[49:05:42.846] Server  LOG     ✓ Compiled in 2.8s
+[49:05:46.161] Server  LOG     ✓ Compiled in 1506ms
+[49:11:23.554] Server  LOG     ✓ Compiled in 157ms
+[49:13:22.271] Server  LOG     ✓ Compiled in 216ms
+[49:13:27.461] Server  LOG     ✓ Compiled in 156ms
+[49:13:31.419] Server  LOG     ✓ Compiled in 97ms
+[49:13:38.404] Server  LOG     ✓ Compiled in 84ms
+[49:13:52.453] Server  LOG     ✓ Compiled in 168ms
+[49:14:00.831] Server  LOG     ✓ Compiled in 126ms
+[49:14:12.207] Server  LOG     ✓ Compiled in 136ms
+[49:14:15.179] Server  LOG     ✓ Compiled in 96ms
+[49:14:18.574] Server  LOG     ✓ Compiled in 91ms
+[49:14:32.338] Server  LOG     ✓ Compiled in 157ms
+[49:14:35.268] Server  LOG     ✓ Compiled in 165ms
+[49:14:41.086] Server  LOG     ✓ Compiled in 80ms
+[49:14:49.851] Server  LOG     ✓ Compiled in 121ms
+[49:14:53.402] Server  LOG     ✓ Compiled in 242ms
+[49:15:25.667] Server  LOG     ✓ Compiled in 263ms
+[49:17:11.668] Server  LOG     ✓ Compiled in 275ms

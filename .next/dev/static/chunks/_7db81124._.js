@@ -20,36 +20,39 @@ const LINES = [
     "0-1 tools + big ideas + interfaces"
 ];
 const DISPLAY_MS = 3000;
-const FADE_MS = 400;
+const ANIM_MS = 400;
 function TextCycler(t0) {
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "a9dd568d82454fc1fc31d652194d91a0e299ce24f5354beb50c82629ca191aba") {
-        for(let $i = 0; $i < 9; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(10);
+    if ($[0] !== "e18cd32855b31466a19783ad15b441e198ef485ceb952d812a8749d1a1cc7871") {
+        for(let $i = 0; $i < 10; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "a9dd568d82454fc1fc31d652194d91a0e299ce24f5354beb50c82629ca191aba";
+        $[0] = "e18cd32855b31466a19783ad15b441e198ef485ceb952d812a8749d1a1cc7871";
     }
     const { style } = t0;
     const [index, setIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
-    const [visible, setVisible] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [phase, setPhase] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("enter");
     let t1;
     let t2;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
         t1 = ({
             "TextCycler[useEffect()]": ()=>{
-                const cycle = setInterval({
+                const interval = setInterval({
                     "TextCycler[useEffect() > setInterval()]": ()=>{
-                        setVisible(false);
+                        setPhase("exit");
                         setTimeout({
                             "TextCycler[useEffect() > setInterval() > setTimeout()]": ()=>{
                                 setIndex(_TextCyclerUseEffectSetIntervalSetTimeoutSetIndex);
-                                setVisible(true);
+                                setPhase("enter");
+                                setTimeout({
+                                    "TextCycler[useEffect() > setInterval() > setTimeout() > setTimeout()]": ()=>setPhase("idle")
+                                }["TextCycler[useEffect() > setInterval() > setTimeout() > setTimeout()]"], ANIM_MS);
                             }
-                        }["TextCycler[useEffect() > setInterval() > setTimeout()]"], FADE_MS);
+                        }["TextCycler[useEffect() > setInterval() > setTimeout()]"], ANIM_MS);
                     }
-                }["TextCycler[useEffect() > setInterval()]"], DISPLAY_MS + FADE_MS);
-                return ()=>clearInterval(cycle);
+                }["TextCycler[useEffect() > setInterval()]"], DISPLAY_MS);
+                return ()=>clearInterval(interval);
             }
         })["TextCycler[useEffect()]"];
         t2 = [];
@@ -60,41 +63,44 @@ function TextCycler(t0) {
         t2 = $[2];
     }
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t1, t2);
-    const t3 = visible ? 1 : 0;
-    let t4;
-    if ($[3] !== style || $[4] !== t3) {
-        t4 = {
+    const transform = phase === "exit" ? "translateY(-8px)" : phase === "enter" ? "translateY(8px)" : "translateY(0)";
+    const opacity = phase === "idle" ? 1 : 0;
+    let t3;
+    if ($[3] !== opacity || $[4] !== style || $[5] !== transform) {
+        t3 = {
             display: "inline-block",
-            opacity: t3,
-            transition: `opacity ${FADE_MS}ms ease`,
+            opacity,
+            transform,
+            transition: `opacity ${ANIM_MS}ms ease, transform ${ANIM_MS}ms ease`,
             ...style
         };
-        $[3] = style;
-        $[4] = t3;
-        $[5] = t4;
+        $[3] = opacity;
+        $[4] = style;
+        $[5] = transform;
+        $[6] = t3;
     } else {
-        t4 = $[5];
+        t3 = $[6];
     }
-    const t5 = LINES[index];
-    let t6;
-    if ($[6] !== t4 || $[7] !== t5) {
-        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            style: t4,
-            children: t5
+    const t4 = LINES[index];
+    let t5;
+    if ($[7] !== t3 || $[8] !== t4) {
+        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+            style: t3,
+            children: t4
         }, void 0, false, {
             fileName: "[project]/src/app/components/TextCycler.tsx",
-            lineNumber: 66,
+            lineNumber: 72,
             columnNumber: 10
         }, this);
-        $[6] = t4;
-        $[7] = t5;
-        $[8] = t6;
+        $[7] = t3;
+        $[8] = t4;
+        $[9] = t5;
     } else {
-        t6 = $[8];
+        t5 = $[9];
     }
-    return t6;
+    return t5;
 }
-_s(TextCycler, "vmT8oEFNR/HPx0nQUu82NE5xu6U=");
+_s(TextCycler, "qxxX6bOnC+QlhZGPu3vcXbm/uU4=");
 _c = TextCycler;
 function _TextCyclerUseEffectSetIntervalSetTimeoutSetIndex(i) {
     return (i + 1) % LINES.length;
@@ -208,7 +214,7 @@ const HOME_PROJECTS = [
         cardDescription: "Crafted a digital experience for the biannual contemporary art award, The Burke Prize",
         contributions: [
             {
-                title: "Architectured artist information",
+                title: "Architectured artist data",
                 description: "Structured 14 artist data into 4 media categories",
                 hoverImage: "/images/mad/mad.jpg"
             },
@@ -309,11 +315,11 @@ const EXPERIENCE = [
 // ─── Pine tree SVG ──────────────────────────────────────────────────────────
 function PineTree(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(6);
-    if ($[0] !== "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057") {
+    if ($[0] !== "f1ae91b675d96217f7766e362e64ac96b8316d79fd363a8f03a3a0fe82733490") {
         for(let $i = 0; $i < 6; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057";
+        $[0] = "f1ae91b675d96217f7766e362e64ac96b8316d79fd363a8f03a3a0fe82733490";
     }
     const { size: t1 } = t0;
     const size = t1 === undefined ? 28 : t1;
@@ -377,41 +383,45 @@ _c = PineTree;
 const TREES = [
     {
         left: "4%",
-        top: "18%"
+        top: "20%"
     },
     {
-        left: "13%",
-        top: "8%"
-    },
-    {
-        left: "24%",
-        top: "22%"
-    },
-    {
-        left: "68%",
-        top: "12%"
-    },
-    {
-        left: "79%",
-        top: "26%"
-    },
-    {
-        left: "88%",
+        left: "16%",
         top: "10%"
     },
     {
-        left: "94%",
-        top: "30%"
+        left: "28%",
+        top: "28%"
+    },
+    {
+        left: "40%",
+        top: "14%"
+    },
+    {
+        left: "55%",
+        top: "24%"
+    },
+    {
+        left: "68%",
+        top: "8%"
+    },
+    {
+        left: "80%",
+        top: "28%"
+    },
+    {
+        left: "91%",
+        top: "14%"
     }
 ];
 // ─── Media helper ───────────────────────────────────────────────────────────
 function Media(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(6);
-    if ($[0] !== "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057") {
+    if ($[0] !== "f1ae91b675d96217f7766e362e64ac96b8316d79fd363a8f03a3a0fe82733490") {
         for(let $i = 0; $i < 6; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057";
+        $[0] = "f1ae91b675d96217f7766e362e64ac96b8316d79fd363a8f03a3a0fe82733490";
     }
     const { src, style } = t0;
     if (!src) {
@@ -443,7 +453,7 @@ function Media(t0) {
             style: base
         }, void 0, false, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 126,
+            lineNumber: 129,
             columnNumber: 33
         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
             src: src,
@@ -451,7 +461,7 @@ function Media(t0) {
             style: base
         }, void 0, false, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 126,
+            lineNumber: 129,
             columnNumber: 128
         }, this);
         $[3] = base;
@@ -466,11 +476,11 @@ _c1 = Media;
 // ─── About modal ────────────────────────────────────────────────────────────
 function AboutModal(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(5);
-    if ($[0] !== "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057") {
+    if ($[0] !== "f1ae91b675d96217f7766e362e64ac96b8316d79fd363a8f03a3a0fe82733490") {
         for(let $i = 0; $i < 5; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057";
+        $[0] = "f1ae91b675d96217f7766e362e64ac96b8316d79fd363a8f03a3a0fe82733490";
     }
     const { onClose } = t0;
     let t1;
@@ -493,6 +503,7 @@ function AboutModal(t0) {
             onClick: _AboutModalDivOnClick,
             style: {
                 background: "#fff",
+                border: "1px solid #0015ff",
                 width: "min(480px, 90vw)",
                 maxHeight: "70vh",
                 overflowY: "auto",
@@ -511,7 +522,7 @@ function AboutModal(t0) {
                     children: "Fascinated by how things work + why they exist"
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 172,
+                    lineNumber: 176,
                     columnNumber: 8
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -521,10 +532,10 @@ function AboutModal(t0) {
                         lineHeight: 1.7,
                         marginBottom: 16
                     },
-                    children: "I have worked in a variety of spaces from education to gaming and startup to big companies. Storytelling and turning complexity into play is my jam."
+                    children: "Worked in a variety of spaces from education to gaming and startup to big companies. Storytelling and turning complexity into play is my jam."
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 177,
+                    lineNumber: 181,
                     columnNumber: 60
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -537,50 +548,51 @@ function AboutModal(t0) {
                     children: "I love inanimate objects, nature, and my pup."
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 182,
-                    columnNumber: 162
+                    lineNumber: 186,
+                    columnNumber: 155
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     style: {
                         display: "flex",
                         flexDirection: "column",
                         gap: 10,
-                        marginBottom: 32
+                        marginTop: 40,
+                        marginBottom: 50
                     },
                     children: EXPERIENCE.map(_AboutModalEXPERIENCEMap)
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 187,
+                    lineNumber: 191,
                     columnNumber: 59
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     style: {
                         fontSize: 15,
                         color: "#0015FF",
-                        marginBottom: 32
+                        marginBottom: 16
                     },
                     children: "ivychang02@gmail.com"
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 192,
+                    lineNumber: 197,
                     columnNumber: 58
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                     style: {
                         fontFamily: COURIER,
-                        fontSize: 16,
+                        fontSize: 12,
                         color: "#888"
                     },
                     children: "Copyrighted ©2026"
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 196,
+                    lineNumber: 201,
                     columnNumber: 34
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 164,
+            lineNumber: 167,
             columnNumber: 10
         }, this);
         $[2] = t2;
@@ -595,7 +607,7 @@ function AboutModal(t0) {
             children: t2
         }, void 0, false, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 207,
+            lineNumber: 212,
             columnNumber: 10
         }, this);
         $[3] = onClose;
@@ -618,31 +630,31 @@ function _AboutModalEXPERIENCEMap(t0) {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 style: {
-                    fontSize: 16,
+                    fontSize: 14,
                     color: "#111",
                     fontWeight: 400
                 },
                 children: company
             }, void 0, false, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 226,
+                lineNumber: 231,
                 columnNumber: 6
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 style: {
-                    fontSize: 16,
+                    fontSize: 14,
                     color: "#888"
                 },
                 children: role
             }, void 0, false, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 230,
+                lineNumber: 235,
                 columnNumber: 24
             }, this)
         ]
     }, company, true, {
         fileName: "[project]/src/app/page.tsx",
-        lineNumber: 222,
+        lineNumber: 227,
         columnNumber: 10
     }, this);
 }
@@ -652,11 +664,11 @@ function _AboutModalDivOnClick(e) {
 function ProjectCard(t0) {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(50);
-    if ($[0] !== "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057") {
+    if ($[0] !== "f1ae91b675d96217f7766e362e64ac96b8316d79fd363a8f03a3a0fe82733490") {
         for(let $i = 0; $i < 50; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057";
+        $[0] = "f1ae91b675d96217f7766e362e64ac96b8316d79fd363a8f03a3a0fe82733490";
     }
     const { project } = t0;
     const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
@@ -705,7 +717,7 @@ function ProjectCard(t0) {
                 children: project.label
             }, void 0, false, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 290,
+                lineNumber: 295,
                 columnNumber: 13
             }, this);
             $[18] = project.label;
@@ -733,7 +745,7 @@ function ProjectCard(t0) {
                 children: project.cardDescription
             }, void 0, false, {
                 fileName: "[project]/src/app/page.tsx",
-                lineNumber: 311,
+                lineNumber: 316,
                 columnNumber: 13
             }, this);
             $[21] = project.cardDescription;
@@ -771,7 +783,7 @@ function ProjectCard(t0) {
                         children: c.title
                     }, c.title, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 331,
+                        lineNumber: 336,
                         columnNumber: 46
                     }, this)
             })["ProjectCard[tabs.map()]"];
@@ -791,13 +803,13 @@ function ProjectCard(t0) {
                     children: tabs.map(t15)
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 347,
+                    lineNumber: 352,
                     columnNumber: 58
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 347,
+            lineNumber: 352,
             columnNumber: 10
         }, this);
         t3 = "card-image";
@@ -842,12 +854,12 @@ function ProjectCard(t0) {
                             }
                         }, void 0, false, {
                             fileName: "[project]/src/app/page.tsx",
-                            lineNumber: 380,
+                            lineNumber: 385,
                             columnNumber: 12
                         }, this)
                     }, i_0, false, {
                         fileName: "[project]/src/app/page.tsx",
-                        lineNumber: 374,
+                        lineNumber: 379,
                         columnNumber: 50
                     }, this)
             })["ProjectCard[tabs.map()]"];
@@ -891,7 +903,7 @@ function ProjectCard(t0) {
             children: t2
         }, void 0, false, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 420,
+            lineNumber: 425,
             columnNumber: 10
         }, this);
         $[30] = t1;
@@ -908,7 +920,7 @@ function ProjectCard(t0) {
             children: t9
         }, void 0, false, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 429,
+            lineNumber: 434,
             columnNumber: 11
         }, this);
         $[33] = t3;
@@ -928,7 +940,7 @@ function ProjectCard(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 439,
+            lineNumber: 444,
             columnNumber: 11
         }, this);
         $[37] = t10;
@@ -960,7 +972,7 @@ function ProjectCard(t0) {
             children: activeContribution.description
         }, activeTab, false, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 449,
+            lineNumber: 454,
             columnNumber: 46
         }, this);
         $[41] = activeContribution;
@@ -980,7 +992,7 @@ function ProjectCard(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 472,
+            lineNumber: 477,
             columnNumber: 11
         }, this);
         $[44] = T0;
@@ -998,12 +1010,12 @@ _s(ProjectCard, "9RTnV4k8xQ8Z7mmUeyiKoXdA+A8=");
 _c3 = ProjectCard;
 function HomePage() {
     _s1();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(11);
-    if ($[0] !== "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057") {
-        for(let $i = 0; $i < 11; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(12);
+    if ($[0] !== "f1ae91b675d96217f7766e362e64ac96b8316d79fd363a8f03a3a0fe82733490") {
+        for(let $i = 0; $i < 12; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "2be8e369a4859d0c51ad45e1100b4f02023530976d54908506a67cfce8410057";
+        $[0] = "f1ae91b675d96217f7766e362e64ac96b8316d79fd363a8f03a3a0fe82733490";
     }
     const [aboutOpen, setAboutOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     let t0;
@@ -1033,7 +1045,7 @@ function HomePage() {
         };
         t4 = {
             fontFamily: PT_SANS,
-            fontSize: "clamp(16px, 1.2vw, 18px)",
+            fontSize: "clamp(18px, 1.2vw, 20px)",
             color: "#111",
             marginBottom: 8
         };
@@ -1051,7 +1063,16 @@ function HomePage() {
     }
     let t5;
     if ($[6] === Symbol.for("react.memo_cache_sentinel")) {
-        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        t5 = ({
+            "HomePage[<em>.onClick]": ()=>setAboutOpen(_HomePageEmOnClickSetAboutOpen)
+        })["HomePage[<em>.onClick]"];
+        $[6] = t5;
+    } else {
+        t5 = $[6];
+    }
+    let t6;
+    if ($[7] === Symbol.for("react.memo_cache_sentinel")) {
+        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             style: t0,
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
@@ -1067,54 +1088,55 @@ function HomePage() {
                                         "hi, i'm",
                                         " ",
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("em", {
-                                            onClick: {
-                                                "HomePage[<em>.onClick]": ()=>setAboutOpen(_HomePageEmOnClickSetAboutOpen)
-                                            }["HomePage[<em>.onClick]"],
+                                            onClick: t5,
+                                            onMouseEnter: _HomePageEmOnMouseEnter,
+                                            onMouseLeave: _HomePageEmOnMouseLeave,
                                             style: {
                                                 fontStyle: "italic",
-                                                textDecoration: "underline",
+                                                color: "#0015FF",
+                                                textDecoration: "none",
                                                 textUnderlineOffset: 3,
                                                 cursor: "none"
                                             },
                                             children: "ivy"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/page.tsx",
-                                            lineNumber: 540,
+                                            lineNumber: 554,
                                             columnNumber: 91
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/page.tsx",
-                                    lineNumber: 540,
+                                    lineNumber: 554,
                                     columnNumber: 65
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     style: {
                                         fontFamily: PT_SANS,
-                                        fontSize: "clamp(16px, 1.1vw, 18px)",
+                                        fontSize: "clamp(18px, 1.1vw, 20px)",
                                         color: "#111",
                                         minHeight: "1.6em"
                                     },
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$components$2f$TextCycler$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
-                                        lineNumber: 552,
+                                        lineNumber: 565,
                                         columnNumber: 14
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/page.tsx",
-                                    lineNumber: 547,
+                                    lineNumber: 560,
                                     columnNumber: 28
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/page.tsx",
-                            lineNumber: 540,
+                            lineNumber: 554,
                             columnNumber: 49
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 540,
+                    lineNumber: 554,
                     columnNumber: 26
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -1129,49 +1151,49 @@ function HomePage() {
                     children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$data$2f$home$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HOME_PROJECTS"].map(_HomePageHOME_PROJECTSMap)
                 }, void 0, false, {
                     fileName: "[project]/src/app/page.tsx",
-                    lineNumber: 552,
+                    lineNumber: 565,
                     columnNumber: 47
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 540,
+            lineNumber: 554,
             columnNumber: 10
         }, this);
-        $[6] = t5;
+        $[7] = t6;
     } else {
-        t5 = $[6];
+        t6 = $[7];
     }
-    let t6;
-    if ($[7] !== aboutOpen) {
-        t6 = aboutOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AboutModal, {
+    let t7;
+    if ($[8] !== aboutOpen) {
+        t7 = aboutOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(AboutModal, {
             onClose: {
                 "HomePage[<AboutModal>.onClose]": ()=>setAboutOpen(false)
             }["HomePage[<AboutModal>.onClose]"]
         }, void 0, false, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 566,
+            lineNumber: 579,
             columnNumber: 23
         }, this);
-        $[7] = aboutOpen;
-        $[8] = t6;
+        $[8] = aboutOpen;
+        $[9] = t7;
     } else {
-        t6 = $[8];
+        t7 = $[9];
     }
-    let t7;
-    if ($[9] !== t6) {
-        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+    let t8;
+    if ($[10] !== t7) {
+        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
             children: [
-                t5,
-                t6
+                t6,
+                t7
             ]
         }, void 0, true);
-        $[9] = t6;
         $[10] = t7;
+        $[11] = t8;
     } else {
-        t7 = $[10];
+        t8 = $[11];
     }
-    return t7;
+    return t8;
 }
 _s1(HomePage, "MwmwJKZ7e1jm7ddUokZRbDvjBOw=");
 _c4 = HomePage;
@@ -1180,9 +1202,15 @@ function _HomePageHOME_PROJECTSMap(project) {
         project: project
     }, project.id, false, {
         fileName: "[project]/src/app/page.tsx",
-        lineNumber: 585,
+        lineNumber: 598,
         columnNumber: 10
     }, this);
+}
+function _HomePageEmOnMouseLeave(e_0) {
+    return e_0.currentTarget.style.textDecoration = "none";
+}
+function _HomePageEmOnMouseEnter(e) {
+    return e.currentTarget.style.textDecoration = "underline";
 }
 function _HomePageEmOnClickSetAboutOpen(o) {
     return !o;
@@ -1199,12 +1227,12 @@ function _HomePageTREESMap(pos, i) {
             size: 26
         }, void 0, false, {
             fileName: "[project]/src/app/page.tsx",
-            lineNumber: 596,
+            lineNumber: 615,
             columnNumber: 6
         }, this)
     }, i, false, {
         fileName: "[project]/src/app/page.tsx",
-        lineNumber: 591,
+        lineNumber: 610,
         columnNumber: 10
     }, this);
 }

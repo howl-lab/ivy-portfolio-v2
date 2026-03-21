@@ -124,6 +124,12 @@ a, button {
   border-color: #0015ff;
 }
 
+.rect-btn--active-blue:hover {
+  color: #0015ff;
+  background: #0015ff12;
+  border-color: #0015ff;
+}
+
 .rect-btn--active-black {
   color: #fff;
   background: #111;

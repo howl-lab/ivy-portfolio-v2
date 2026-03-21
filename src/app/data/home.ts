@@ -100,7 +100,7 @@ export const HOME_PROJECTS: HomeProject[] = [
       "Crafted a digital experience for the biannual contemporary art award, The Burke Prize",
     contributions: [
       {
-        title: "Architectured artist information",
+        title: "Architectured artist data",
         description: "Structured 14 artist data into 4 media categories",
         hoverImage: "/images/mad/mad.jpg",
       },

@@ -36,22 +36,23 @@ function ProjectContextModal({
   onClose: () => void;
   anchorRef: React.RefObject<HTMLButtonElement | null>;
 }) {
-  const [pos, setPos] = useState<{ x: number; y: number } | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const [desktopPos, setDesktopPos] = useState<{ x: number; y: number } | null>(
+    null,
+  );
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
   useEffect(() => {
     const update = () => {
-      if (window.innerWidth < 640) {
-        setIsMobile(true);
-        setPos({ x: 0, y: 0 });
-      } else {
-        setIsMobile(false);
-        if (anchorRef.current) {
-          const rect = anchorRef.current.getBoundingClientRect();
-          setPos({ x: rect.right - 360, y: rect.bottom + 8 });
-        } else {
-          setPos({ x: window.innerWidth - 400, y: 80 });
-        }
+      const mobile = window.innerWidth < 640;
+      setIsMobile(mobile);
+      if (!mobile) {
+        const x = anchorRef.current
+          ? anchorRef.current.getBoundingClientRect().right - 360
+          : window.innerWidth - 400;
+        const y = anchorRef.current
+          ? anchorRef.current.getBoundingClientRect().bottom + 8
+          : 80;
+        setDesktopPos({ x, y });
       }
     };
     update();
@@ -59,7 +60,7 @@ function ProjectContextModal({
     return () => window.removeEventListener("resize", update);
   }, [anchorRef]);
 
-  if (!pos) return null;
+  if (isMobile === null) return null;
 
   const LABELS: Record<string, string> = {
     problem: "Problem",
@@ -68,76 +69,30 @@ function ProjectContextModal({
     outcome: "Outcome",
   };
 
-  return (
+  const card = (
     <div
       className="modal-card"
-      style={
-        isMobile
-          ? {
-              position: "fixed",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              zIndex: 9990,
-              background: "#fff",
-              border: "1px solid #ddd",
-              borderRadius: 0,
-              width: "90vw",
-              maxWidth: 360,
-            }
+      style={{
+        background: "#fff",
+        border: "1px solid #0015ff",
+        borderRadius: 0,
+        width: isMobile ? "90vw" : 360,
+        maxWidth: isMobile ? 400 : "90vw",
+        maxHeight: "80vh",
+        display: "flex",
+        flexDirection: "column",
+        ...(isMobile
+          ? {}
           : {
               position: "fixed",
-              top: pos.y,
-              left: pos.x,
+              top: desktopPos?.y ?? 80,
+              left: desktopPos?.x ?? window.innerWidth - 400,
               zIndex: 9990,
-              background: "#fff",
-              border: "1px solid #ddd",
-              borderRadius: 0,
-              width: 360,
-              maxWidth: "90vw",
-            }
-      }
+            }),
+      }}
     >
-      {/* Header */}
-      <div
-        style={{
-          padding: "14px 20px",
-          borderBottom: "1px solid #eee",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <span
-          style={{
-            fontFamily: PT_SANS,
-            fontWeight: 700,
-            fontSize: 14,
-            color: "#111",
-            letterSpacing: "0.05em",
-            textTransform: "uppercase",
-          }}
-        >
-          Project Context
-        </span>
-        <button
-          onClick={onClose}
-          style={{
-            background: "none",
-            border: "none",
-            cursor: "none",
-            color: "#888",
-            fontSize: 16,
-            lineHeight: 1,
-            padding: "0 2px",
-          }}
-        >
-          ×
-        </button>
-      </div>
-
       {/* Content */}
-      <div style={{ padding: "20px 20px 24px" }}>
+      <div style={{ padding: "20px 20px 24px", overflowY: "auto", flex: 1 }}>
         {SIDEBAR_ITEMS.map((key) => (
           <div key={key} style={{ marginBottom: 20 }}>
             <p
@@ -165,6 +120,32 @@ function ProjectContextModal({
         ))}
       </div>
     </div>
+  );
+
+  if (isMobile) {
+    return (
+      <div
+        onClick={onClose}
+        style={{
+          position: "fixed",
+          inset: 0,
+          zIndex: 9990,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "20px",
+        }}
+      >
+        <div onClick={(e) => e.stopPropagation()}>{card}</div>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 9989 }} />
+      {card}
+    </>
   );
 }
 
@@ -363,19 +344,19 @@ export default function CaseStudyPage() {
           top: 24,
           left: "50%",
           transform: "translateX(-50%)",
-          fontFamily: PT_SANS,
+          fontFamily: COURIER,
           fontSize: 14,
           color: "#888",
           textDecoration: "none",
-          transition: "color 0.15s",
+          transition: "text-decoration 0.15s",
           zIndex: 100,
           pointerEvents: "auto",
         }}
         onMouseEnter={(e) =>
-          ((e.currentTarget as HTMLAnchorElement).style.color = "#111")
+          ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "underline")
         }
         onMouseLeave={(e) =>
-          ((e.currentTarget as HTMLAnchorElement).style.color = "#888")
+          ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")
         }
       >
         ← back home

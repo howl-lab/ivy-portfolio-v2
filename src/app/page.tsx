@@ -37,13 +37,14 @@ function PineTree({ size = 28 }: { size?: number }) {
 }
 
 const TREES = [
-  { left: "4%", top: "18%" },
-  { left: "13%", top: "8%" },
-  { left: "24%", top: "22%" },
-  { left: "68%", top: "12%" },
-  { left: "79%", top: "26%" },
-  { left: "88%", top: "10%" },
-  { left: "94%", top: "30%" },
+  { left: "4%", top: "20%" },
+  { left: "16%", top: "10%" },
+  { left: "28%", top: "28%" },
+  { left: "40%", top: "14%" },
+  { left: "55%", top: "24%" },
+  { left: "68%", top: "8%" },
+  { left: "80%", top: "28%" },
+  { left: "91%", top: "14%" },
 ];
 
 // ─── Media helper ───────────────────────────────────────────────────────────
@@ -82,6 +83,7 @@ function AboutModal({ onClose }: { onClose: () => void }) {
         onClick={(e) => e.stopPropagation()}
         style={{
           background: "#fff",
+          border: "1px solid #0015ff",
           width: "min(480px, 90vw)",
           maxHeight: "70vh",
           overflowY: "auto",
@@ -108,9 +110,9 @@ function AboutModal({ onClose }: { onClose: () => void }) {
             marginBottom: 16,
           }}
         >
-          I have worked in a variety of spaces from education to gaming and
-          startup to big companies. Storytelling and turning complexity into
-          play is my jam.
+          Worked in a variety of spaces from education to gaming and startup to
+          big companies. Storytelling and turning complexity into play is my
+          jam.
         </p>
         <p
           style={{
@@ -128,7 +130,8 @@ function AboutModal({ onClose }: { onClose: () => void }) {
             display: "flex",
             flexDirection: "column",
             gap: 10,
-            marginBottom: 32,
+            marginTop: 40,
+            marginBottom: 50,
           }}
         >
           {EXPERIENCE.map(({ company, role }) => (
@@ -136,19 +139,19 @@ function AboutModal({ onClose }: { onClose: () => void }) {
               key={company}
               style={{ display: "flex", alignItems: "center", gap: 10 }}
             >
-              <span style={{ fontSize: 16, color: "#111", fontWeight: 400 }}>
+              <span style={{ fontSize: 14, color: "#111", fontWeight: 400 }}>
                 {company}
               </span>
-              <span style={{ fontSize: 16, color: "#888" }}>{role}</span>
+              <span style={{ fontSize: 14, color: "#888" }}>{role}</span>
             </div>
           ))}
         </div>
 
-        <p style={{ fontSize: 15, color: "#0015FF", marginBottom: 32 }}>
+        <p style={{ fontSize: 15, color: "#0015FF", marginBottom: 16 }}>
           ivychang02@gmail.com
         </p>
 
-        <p style={{ fontFamily: COURIER, fontSize: 16, color: "#888" }}>
+        <p style={{ fontFamily: COURIER, fontSize: 12, color: "#888" }}>
           Copyrighted ©2026
         </p>
       </div>
@@ -318,7 +321,7 @@ export default function HomePage() {
             <p
               style={{
                 fontFamily: PT_SANS,
-                fontSize: "clamp(16px, 1.2vw, 18px)",
+                fontSize: "clamp(18px, 1.2vw, 20px)",
                 color: "#111",
                 marginBottom: 8,
               }}
@@ -326,9 +329,18 @@ export default function HomePage() {
               hi, i&apos;m{" "}
               <em
                 onClick={() => setAboutOpen((o) => !o)}
+                onMouseEnter={(e) =>
+                  ((e.currentTarget as HTMLElement).style.textDecoration =
+                    "underline")
+                }
+                onMouseLeave={(e) =>
+                  ((e.currentTarget as HTMLElement).style.textDecoration =
+                    "none")
+                }
                 style={{
                   fontStyle: "italic",
-                  textDecoration: "underline",
+                  color: "#0015FF",
+                  textDecoration: "none",
                   textUnderlineOffset: 3,
                   cursor: "none",
                 }}
@@ -339,7 +351,7 @@ export default function HomePage() {
             <p
               style={{
                 fontFamily: PT_SANS,
-                fontSize: "clamp(16px, 1.1vw, 18px)",
+                fontSize: "clamp(18px, 1.1vw, 20px)",
                 color: "#111",
                 minHeight: "1.6em",
               }}

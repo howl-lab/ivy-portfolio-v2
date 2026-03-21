@@ -9,29 +9,38 @@ const LINES = [
 ];
 
 const DISPLAY_MS = 3000;
-const FADE_MS = 400;
+const ANIM_MS = 400;
 
 export default function TextCycler({ style }: { style?: React.CSSProperties }) {
   const [index, setIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const [phase, setPhase] = useState<"idle" | "exit" | "enter">("enter");
 
   useEffect(() => {
-    const cycle = setInterval(() => {
-      setVisible(false);
+    const interval = setInterval(() => {
+      setPhase("exit");
       setTimeout(() => {
         setIndex((i) => (i + 1) % LINES.length);
-        setVisible(true);
-      }, FADE_MS);
-    }, DISPLAY_MS + FADE_MS);
-    return () => clearInterval(cycle);
+        setPhase("enter");
+        setTimeout(() => setPhase("idle"), ANIM_MS);
+      }, ANIM_MS);
+    }, DISPLAY_MS);
+    return () => clearInterval(interval);
   }, []);
+
+  const transform =
+    phase === "exit" ? "translateY(-8px)" :
+    phase === "enter" ? "translateY(8px)" :
+    "translateY(0)";
+
+  const opacity = phase === "idle" ? 1 : 0;
 
   return (
     <span
       style={{
         display: "inline-block",
-        opacity: visible ? 1 : 0,
-        transition: `opacity ${FADE_MS}ms ease`,
+        opacity,
+        transform,
+        transition: `opacity ${ANIM_MS}ms ease, transform ${ANIM_MS}ms ease`,
         ...style,
       }}
     >
