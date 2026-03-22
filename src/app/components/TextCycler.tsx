@@ -9,11 +9,11 @@ const LINES = [
 ];
 
 const DISPLAY_MS = 3000;
-const ANIM_MS = 400;
+const ANIM_MS = 250;
 
 export default function TextCycler({ style }: { style?: React.CSSProperties }) {
   const [index, setIndex] = useState(0);
-  const [phase, setPhase] = useState<"idle" | "exit" | "enter">("enter");
+  const [phase, setPhase] = useState<"idle" | "exit" | "enter">("idle");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,8 +28,8 @@ export default function TextCycler({ style }: { style?: React.CSSProperties }) {
   }, []);
 
   const transform =
-    phase === "exit" ? "translateY(-8px)" :
-    phase === "enter" ? "translateY(8px)" :
+    phase === "exit" ? "translateY(6px)" :
+    phase === "enter" ? "translateY(12px)" :
     "translateY(0)";
 
   const opacity = phase === "idle" ? 1 : 0;
@@ -40,7 +40,7 @@ export default function TextCycler({ style }: { style?: React.CSSProperties }) {
         display: "inline-block",
         opacity,
         transform,
-        transition: `opacity ${ANIM_MS}ms ease, transform ${ANIM_MS}ms ease`,
+        transition: `opacity ${ANIM_MS}ms ease, transform ${ANIM_MS}ms cubic-bezier(0.22, 1, 0.36, 1)`,
         ...style,
       }}
     >

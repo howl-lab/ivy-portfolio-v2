@@ -17,10 +17,10 @@ const LINES = [
     "0-1 tools + big ideas + interfaces"
 ];
 const DISPLAY_MS = 3000;
-const ANIM_MS = 400;
+const ANIM_MS = 250;
 function TextCycler({ style }) {
     const [index, setIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
-    const [phase, setPhase] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("enter");
+    const [phase, setPhase] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("idle");
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         const interval = setInterval(()=>{
             setPhase("exit");
@@ -32,14 +32,14 @@ function TextCycler({ style }) {
         }, DISPLAY_MS);
         return ()=>clearInterval(interval);
     }, []);
-    const transform = phase === "exit" ? "translateY(-8px)" : phase === "enter" ? "translateY(8px)" : "translateY(0)";
+    const transform = phase === "exit" ? "translateY(6px)" : phase === "enter" ? "translateY(12px)" : "translateY(0)";
     const opacity = phase === "idle" ? 1 : 0;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
         style: {
             display: "inline-block",
             opacity,
             transform,
-            transition: `opacity ${ANIM_MS}ms ease, transform ${ANIM_MS}ms ease`,
+            transition: `opacity ${ANIM_MS}ms ease, transform ${ANIM_MS}ms cubic-bezier(0.22, 1, 0.36, 1)`,
             ...style
         },
         children: LINES[index]
@@ -132,7 +132,7 @@ const HOME_PROJECTS = [
             },
             {
                 title: "Interactive interface design",
-                description: "Mapped different player states — guest demo, zero state, return player — for a smooth experience",
+                description: "Launched product replaced 2013's iFruit app ",
                 hoverImage: "/images/gta/gta-states.jpg"
             },
             {
@@ -154,17 +154,17 @@ const HOME_PROJECTS = [
         contributions: [
             {
                 title: "Architectured artist data",
-                description: "Structured 14 artist data into 4 media categories",
+                description: "Structured 16 artist data into 4 media categories",
                 hoverImage: "/images/mad/mad.jpg"
             },
             {
                 title: "Elements of storytelling",
-                description: "I designed an interactive experience to introduce visitors to the site and award",
+                description: "I designed a narrative-first and interactive experience to introduce visitors to the site",
                 hoverImage: "/images/mad/mad-story.jpg"
             },
             {
                 title: "Website design",
-                description: "I defined a narrative-first and hands-on interaction system and visual language",
+                description: "The Museum Association of New York honored the site with its Excellence in Design Award 2022",
                 hoverImage: "/images/mad/mad-web.jpg"
             }
         ]
@@ -192,7 +192,7 @@ const HOME_PROJECTS = [
             },
             {
                 title: "Custom math keyboard",
-                description: "Cross-team collaborated on Google’s first math keyboard",
+                description: "I led product design and cross-team collaborated on Google’s first math keyboard",
                 hoverImage: "/images/socratic/socratic-content.jpg"
             }
         ]

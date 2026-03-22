@@ -80,8 +80,7 @@ export const HOME_PROJECTS: HomeProject[] = [
       },
       {
         title: "Interactive interface design",
-        description:
-          "Mapped different player states — guest demo, zero state, return player — for a smooth experience",
+        description: "Launched product replaced 2013's iFruit app ",
         hoverImage: "/images/gta/gta-states.jpg",
       },
       {
@@ -101,19 +100,19 @@ export const HOME_PROJECTS: HomeProject[] = [
     contributions: [
       {
         title: "Architectured artist data",
-        description: "Structured 14 artist data into 4 media categories",
+        description: "Structured 16 artist data into 4 media categories",
         hoverImage: "/images/mad/mad.jpg",
       },
       {
         title: "Elements of storytelling",
         description:
-          "I designed an interactive experience to introduce visitors to the site and award",
+          "I designed a narrative-first and interactive experience to introduce visitors to the site",
         hoverImage: "/images/mad/mad-story.jpg",
       },
       {
         title: "Website design",
         description:
-          "I defined a narrative-first and hands-on interaction system and visual language",
+          "The Museum Association of New York honored the site with its Excellence in Design Award 2022",
         hoverImage: "/images/mad/mad-web.jpg",
       },
     ],
@@ -139,7 +138,8 @@ export const HOME_PROJECTS: HomeProject[] = [
       },
       {
         title: "Custom math keyboard",
-        description: "Cross-team collaborated on Google’s first math keyboard",
+        description:
+          "I led product design and cross-team collaborated on Google’s first math keyboard",
         hoverImage: "/images/socratic/socratic-content.jpg",
       },
     ],

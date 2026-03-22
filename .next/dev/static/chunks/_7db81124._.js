@@ -20,19 +20,19 @@ const LINES = [
     "0-1 tools + big ideas + interfaces"
 ];
 const DISPLAY_MS = 3000;
-const ANIM_MS = 400;
+const ANIM_MS = 250;
 function TextCycler(t0) {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(10);
-    if ($[0] !== "e18cd32855b31466a19783ad15b441e198ef485ceb952d812a8749d1a1cc7871") {
+    if ($[0] !== "a2d279d2f25b8ec4f7ca4951406e5a3bb31c61d0abcb8f8e761e1056dcbf3beb") {
         for(let $i = 0; $i < 10; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "e18cd32855b31466a19783ad15b441e198ef485ceb952d812a8749d1a1cc7871";
+        $[0] = "a2d279d2f25b8ec4f7ca4951406e5a3bb31c61d0abcb8f8e761e1056dcbf3beb";
     }
     const { style } = t0;
     const [index, setIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
-    const [phase, setPhase] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("enter");
+    const [phase, setPhase] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("idle");
     let t1;
     let t2;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -63,7 +63,7 @@ function TextCycler(t0) {
         t2 = $[2];
     }
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t1, t2);
-    const transform = phase === "exit" ? "translateY(-8px)" : phase === "enter" ? "translateY(8px)" : "translateY(0)";
+    const transform = phase === "exit" ? "translateY(6px)" : phase === "enter" ? "translateY(12px)" : "translateY(0)";
     const opacity = phase === "idle" ? 1 : 0;
     let t3;
     if ($[3] !== opacity || $[4] !== style || $[5] !== transform) {
@@ -71,7 +71,7 @@ function TextCycler(t0) {
             display: "inline-block",
             opacity,
             transform,
-            transition: `opacity ${ANIM_MS}ms ease, transform ${ANIM_MS}ms ease`,
+            transition: `opacity ${ANIM_MS}ms ease, transform ${ANIM_MS}ms cubic-bezier(0.22, 1, 0.36, 1)`,
             ...style
         };
         $[3] = opacity;
@@ -100,7 +100,7 @@ function TextCycler(t0) {
     }
     return t5;
 }
-_s(TextCycler, "qxxX6bOnC+QlhZGPu3vcXbm/uU4=");
+_s(TextCycler, "k3YzLTCwNyj3yQC0ezLC6ZyUCAs=");
 _c = TextCycler;
 function _TextCyclerUseEffectSetIntervalSetTimeoutSetIndex(i) {
     return (i + 1) % LINES.length;
@@ -193,7 +193,7 @@ const HOME_PROJECTS = [
             },
             {
                 title: "Interactive interface design",
-                description: "Mapped different player states — guest demo, zero state, return player — for a smooth experience",
+                description: "Launched product replaced 2013's iFruit app ",
                 hoverImage: "/images/gta/gta-states.jpg"
             },
             {
@@ -215,17 +215,17 @@ const HOME_PROJECTS = [
         contributions: [
             {
                 title: "Architectured artist data",
-                description: "Structured 14 artist data into 4 media categories",
+                description: "Structured 16 artist data into 4 media categories",
                 hoverImage: "/images/mad/mad.jpg"
             },
             {
                 title: "Elements of storytelling",
-                description: "I designed an interactive experience to introduce visitors to the site and award",
+                description: "I designed a narrative-first and interactive experience to introduce visitors to the site",
                 hoverImage: "/images/mad/mad-story.jpg"
             },
             {
                 title: "Website design",
-                description: "I defined a narrative-first and hands-on interaction system and visual language",
+                description: "The Museum Association of New York honored the site with its Excellence in Design Award 2022",
                 hoverImage: "/images/mad/mad-web.jpg"
             }
         ]
@@ -253,7 +253,7 @@ const HOME_PROJECTS = [
             },
             {
                 title: "Custom math keyboard",
-                description: "Cross-team collaborated on Google’s first math keyboard",
+                description: "I led product design and cross-team collaborated on Google’s first math keyboard",
                 hoverImage: "/images/socratic/socratic-content.jpg"
             }
         ]
