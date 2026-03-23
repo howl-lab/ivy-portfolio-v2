@@ -159,6 +159,8 @@ function ContributionCard({ contribution }: { contribution: Contribution }) {
           borderRadius: 16,
           padding: "32px 36px",
           animation: "fadeIn 0.2s ease forwards",
+          width: "fit-content",
+          minWidth: "min(100%, 860px)",
         }}
       >
         <h3
@@ -198,6 +200,7 @@ function ContributionCard({ contribution }: { contribution: Contribution }) {
             {contribution.expandedImages.map((img, i) => (
               <div
                 key={i}
+                className="case-study-img"
                 style={{
                   width: "100%",
                 }}
@@ -207,7 +210,7 @@ function ContributionCard({ contribution }: { contribution: Contribution }) {
                     width: "100%",
                     aspectRatio: "4/3",
                     background: "#d8d8d8",
-                    overflow: "scroll",
+                    overflow: "hidden",
                     marginBottom: 8,
                   }}
                 >
@@ -238,6 +241,8 @@ function ContributionCard({ contribution }: { contribution: Contribution }) {
             borderRadius: 16,
             padding: "32px 36px",
             animation: "fadeIn 0.2s ease forwards",
+            width: "fit-content",
+            minWidth: "min(100%, 860px)",
           }}
         >
           <h3
@@ -267,7 +272,7 @@ function ContributionCard({ contribution }: { contribution: Contribution }) {
           {contribution.subCard.expandedImages && (
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
               {contribution.subCard.expandedImages.map((img, i) => (
-                <div key={i} style={{ width: "100%" }}>
+                <div key={i} className="case-study-img" style={{ width: "100%" }}>
                   <div
                     style={{
                       width: "100%",
@@ -300,19 +305,89 @@ function ContributionCard({ contribution }: { contribution: Contribution }) {
   );
 }
 
+// ─── Scroll layout (side nav + all cards) ────────────────────────────────────
+function ScrollLayout({ contributions }: { contributions: Contribution[] }) {
+  const [activeSection, setActiveSection] = useState(0);
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers = contributions.map((_, i) => {
+      const el = sectionRefs.current[i];
+      if (!el) return null;
+      const obs = new IntersectionObserver(
+        ([entry]) => { if (entry.isIntersecting) setActiveSection(i); },
+        { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
+      );
+      obs.observe(el);
+      return obs;
+    });
+    return () => observers.forEach((o) => o?.disconnect());
+  }, [contributions]);
+
+  return (
+    <div style={{ display: "flex", gap: 48, alignItems: "flex-start" }}>
+      {/* Side nav */}
+      <nav
+        style={{
+          position: "sticky",
+          top: 72,
+          flexShrink: 0,
+          width: 160,
+          display: "flex",
+          flexDirection: "column",
+          gap: 4,
+        }}
+      >
+        {contributions.map((c, i) => (
+          <button
+            key={c.title}
+            onClick={() => sectionRefs.current[i]?.scrollIntoView({ behavior: "smooth", block: "start" })}
+            style={{
+              background: "none",
+              border: "none",
+              textAlign: "left",
+              fontFamily: COURIER,
+              fontSize: 13,
+              padding: "6px 0",
+              cursor: "none",
+              color: activeSection === i ? "#0015FF" : "#888",
+              fontWeight: 400,
+              transition: "color 0.2s",
+              borderLeft: `2px solid ${activeSection === i ? "#0015FF" : "transparent"}`,
+              paddingLeft: 10,
+            }}
+          >
+            {c.title}
+          </button>
+        ))}
+      </nav>
+
+      {/* All cards stacked */}
+      <div style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", gap: 24 }}>
+        {contributions.map((c, i) => (
+          <div
+            key={c.title}
+            ref={(el) => { sectionRefs.current[i] = el; }}
+            style={{ scrollMarginTop: 80 }}
+          >
+            <ContributionCard contribution={c} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 // ─── Case study page ──────────────────────────────────────────────────────────
 export default function CaseStudyPage() {
   const params = useParams();
   const projectId = params?.projectId as string;
   const project = PROJECTS.find((p) => p.id === projectId);
 
-  const [activeTab, setActiveTab] = useState(0);
   const [contextOpen, setContextOpen] = useState(false);
   const contextBtnRef = useRef<HTMLButtonElement>(null);
 
-  // Reset tab when project changes
   useEffect(() => {
-    setActiveTab(0);
     setContextOpen(false);
   }, [projectId]);
 
@@ -331,8 +406,6 @@ export default function CaseStudyPage() {
       </div>
     );
   }
-
-  const activeContribution = project.contributions[activeTab];
 
   return (
     <div style={{ minHeight: "100vh", background: "#ebebeb" }}>
@@ -471,28 +544,7 @@ export default function CaseStudyPage() {
           </p>
         </div>
 
-        {/* ── Tabs ── */}
-        <div
-          style={{
-            display: "flex",
-            gap: 8,
-            flexWrap: "wrap",
-            marginBottom: 24,
-          }}
-        >
-          {project.contributions.map((c, i) => (
-            <button
-              key={c.title}
-              className={`rect-btn${activeTab === i ? " rect-btn--active-black" : ""}`}
-              onClick={() => setActiveTab(i)}
-            >
-              {c.title}
-            </button>
-          ))}
-        </div>
-
-        {/* ── Active contribution card ── */}
-        <ContributionCard key={activeTab} contribution={activeContribution} />
+        <ScrollLayout contributions={project.contributions} />
       </div>
 
       {/* ── Draggable Project Context modal ── */}

@@ -405,3 +405,27 @@ Import traces:
 [60:13:43.998] Server  LOG     ✓ Compiled in 2ms
 [60:14:46.328] Server  LOG     ✓ Compiled in 3ms
 [60:14:58.693] Server  LOG     ✓ Compiled in 3ms
+[77:08:31.718] Server  LOG     ✓ Compiled in 283ms
+[77:08:36.842] Server  LOG     ✓ Compiled in 241ms
+[77:34:30.143] Server  LOG     ✓ Compiled in 309ms
+[77:34:35.293] Server  LOG     ✓ Compiled in 115ms
+[77:34:44.434] Server  LOG     ✓ Compiled in 23ms
+[77:34:55.193] Server  LOG     ✓ Compiled in 272ms
+[77:35:00.366] Server  LOG     ✓ Compiled in 272ms
+[77:38:31.314] Server  LOG     ✓ Compiled in 301ms
+[77:38:50.184] Server  LOG     ✓ Compiled in 279ms
+[78:06:26.959] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[78:10:35.060] Server  LOG     ✓ Compiled in 326ms
+[78:10:41.964] Server  LOG     ✓ Compiled in 271ms
+[78:10:42.057] Browser ERROR   uncaughtError: ReferenceError: ScrollLayout is not defined
+[78:10:56.773] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[78:10:56.900] Server  LOG     ✓ Compiled in 288ms
+[78:10:57.604] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[78:11:05.242] Server  LOG     ✓ Compiled in 135ms
+[78:36:39.475] Server  LOG     ✓ Compiled in 150ms
+[78:36:45.987] Server  LOG     ✓ Compiled in 172ms
+[78:36:52.172] Server  LOG     ✓ Compiled in 159ms
+[78:36:56.695] Server  LOG     ✓ Compiled in 166ms
+[78:39:15.112] Server  LOG     ✓ Compiled in 152ms
+[78:39:52.121] Server  LOG     ✓ Compiled in 196ms
+[78:40:37.509] Server  LOG     ✓ Compiled in 214ms

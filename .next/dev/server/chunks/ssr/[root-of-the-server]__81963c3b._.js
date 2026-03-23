@@ -684,7 +684,9 @@ function ContributionCard({ contribution }) {
                     background: "#fff",
                     borderRadius: 16,
                     padding: "32px 36px",
-                    animation: "fadeIn 0.2s ease forwards"
+                    animation: "fadeIn 0.2s ease forwards",
+                    width: "fit-content",
+                    minWidth: "min(100%, 860px)"
                 },
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -698,7 +700,7 @@ function ContributionCard({ contribution }) {
                         children: contribution.cardTitle ?? contribution.title
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 164,
+                        lineNumber: 166,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -714,7 +716,7 @@ function ContributionCard({ contribution }) {
                         children: contribution.expandedText
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 175,
+                        lineNumber: 177,
                         columnNumber: 9
                     }, this),
                     contribution.expandedImages && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -724,106 +726,7 @@ function ContributionCard({ contribution }) {
                             gap: 16
                         },
                         children: contribution.expandedImages.map((img, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                style: {
-                                    width: "100%"
-                                },
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        style: {
-                                            width: "100%",
-                                            aspectRatio: "4/3",
-                                            background: "#d8d8d8",
-                                            overflow: "scroll",
-                                            marginBottom: 8
-                                        },
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Media, {
-                                            src: img.src
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/app/[projectId]/page.tsx",
-                                            lineNumber: 214,
-                                            columnNumber: 19
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 205,
-                                        columnNumber: 17
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        style: {
-                                            fontFamily: COURIER,
-                                            fontSize: 14,
-                                            color: "#555",
-                                            lineHeight: 1.5,
-                                            whiteSpace: "pre-line"
-                                        },
-                                        children: img.caption
-                                    }, void 0, false, {
-                                        fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 216,
-                                        columnNumber: 17
-                                    }, this)
-                                ]
-                            }, i, true, {
-                                fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 199,
-                                columnNumber: 15
-                            }, this))
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 191,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 156,
-                columnNumber: 7
-            }, this),
-            contribution.subCard && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                style: {
-                    background: "#fff",
-                    borderRadius: 16,
-                    padding: "32px 36px",
-                    animation: "fadeIn 0.2s ease forwards"
-                },
-                children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        style: {
-                            fontFamily: PT_SANS,
-                            fontWeight: 700,
-                            fontSize: "clamp(16px, 1.8vw, 16px)",
-                            color: "#111",
-                            marginBottom: 12
-                        },
-                        children: contribution.subCard.title
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 243,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        style: {
-                            fontFamily: PT_SANS,
-                            fontSize: 16,
-                            color: "#444",
-                            lineHeight: 1.5,
-                            marginBottom: 28,
-                            maxWidth: 860,
-                            whiteSpace: "pre-line"
-                        },
-                        children: contribution.subCard.expandedText
-                    }, void 0, false, {
-                        fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 254,
-                        columnNumber: 11
-                    }, this),
-                    contribution.subCard.expandedImages && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        style: {
-                            display: "flex",
-                            flexDirection: "column",
-                            gap: 16
-                        },
-                        children: contribution.subCard.expandedImages.map((img, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "case-study-img",
                                 style: {
                                     width: "100%"
                                 },
@@ -840,12 +743,115 @@ function ContributionCard({ contribution }) {
                                             src: img.src
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/[projectId]/page.tsx",
-                                            lineNumber: 280,
+                                            lineNumber: 217,
+                                            columnNumber: 19
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/[projectId]/page.tsx",
+                                        lineNumber: 208,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        style: {
+                                            fontFamily: COURIER,
+                                            fontSize: 14,
+                                            color: "#555",
+                                            lineHeight: 1.5,
+                                            whiteSpace: "pre-line"
+                                        },
+                                        children: img.caption
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/[projectId]/page.tsx",
+                                        lineNumber: 219,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, i, true, {
+                                fileName: "[project]/src/app/[projectId]/page.tsx",
+                                lineNumber: 201,
+                                columnNumber: 15
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/[projectId]/page.tsx",
+                        lineNumber: 193,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/src/app/[projectId]/page.tsx",
+                lineNumber: 156,
+                columnNumber: 7
+            }, this),
+            contribution.subCard && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                style: {
+                    background: "#fff",
+                    borderRadius: 16,
+                    padding: "32px 36px",
+                    animation: "fadeIn 0.2s ease forwards",
+                    width: "fit-content",
+                    minWidth: "min(100%, 860px)"
+                },
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        style: {
+                            fontFamily: PT_SANS,
+                            fontWeight: 700,
+                            fontSize: "clamp(16px, 1.8vw, 16px)",
+                            color: "#111",
+                            marginBottom: 12
+                        },
+                        children: contribution.subCard.title
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/[projectId]/page.tsx",
+                        lineNumber: 248,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        style: {
+                            fontFamily: PT_SANS,
+                            fontSize: 16,
+                            color: "#444",
+                            lineHeight: 1.5,
+                            marginBottom: 28,
+                            maxWidth: 860,
+                            whiteSpace: "pre-line"
+                        },
+                        children: contribution.subCard.expandedText
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/[projectId]/page.tsx",
+                        lineNumber: 259,
+                        columnNumber: 11
+                    }, this),
+                    contribution.subCard.expandedImages && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        style: {
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: 16
+                        },
+                        children: contribution.subCard.expandedImages.map((img, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "case-study-img",
+                                style: {
+                                    width: "100%"
+                                },
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        style: {
+                                            width: "100%",
+                                            aspectRatio: "4/3",
+                                            background: "#d8d8d8",
+                                            overflow: "hidden",
+                                            marginBottom: 8
+                                        },
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Media, {
+                                            src: img.src
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/[projectId]/page.tsx",
+                                            lineNumber: 285,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 271,
+                                        lineNumber: 276,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -859,24 +865,24 @@ function ContributionCard({ contribution }) {
                                         children: img.caption
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 282,
+                                        lineNumber: 287,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, i, true, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 270,
+                                lineNumber: 275,
                                 columnNumber: 17
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 268,
+                        lineNumber: 273,
                         columnNumber: 13
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 235,
+                lineNumber: 238,
                 columnNumber: 9
             }, this)
         ]
@@ -886,16 +892,120 @@ function ContributionCard({ contribution }) {
         columnNumber: 5
     }, this);
 }
+// ─── Scroll layout (side nav + all cards) ────────────────────────────────────
+function ScrollLayout({ contributions }) {
+    const [activeSection, setActiveSection] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
+    const sectionRefs = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])([]);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const observers = contributions.map((_, i)=>{
+            const el = sectionRefs.current[i];
+            if (!el) return null;
+            const obs = new IntersectionObserver(([entry])=>{
+                if (entry.isIntersecting) setActiveSection(i);
+            }, {
+                rootMargin: "-40% 0px -50% 0px",
+                threshold: 0
+            });
+            obs.observe(el);
+            return obs;
+        });
+        return ()=>observers.forEach((o)=>o?.disconnect());
+    }, [
+        contributions
+    ]);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        style: {
+            display: "flex",
+            gap: 48,
+            alignItems: "flex-start"
+        },
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+                style: {
+                    position: "sticky",
+                    top: 72,
+                    flexShrink: 0,
+                    width: 160,
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 4
+                },
+                children: contributions.map((c, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        onClick: ()=>sectionRefs.current[i]?.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start"
+                            }),
+                        style: {
+                            background: "none",
+                            border: "none",
+                            textAlign: "left",
+                            fontFamily: COURIER,
+                            fontSize: 13,
+                            padding: "6px 0",
+                            cursor: "none",
+                            color: activeSection === i ? "#0015FF" : "#888",
+                            fontWeight: 400,
+                            transition: "color 0.2s",
+                            borderLeft: `2px solid ${activeSection === i ? "#0015FF" : "transparent"}`,
+                            paddingLeft: 10
+                        },
+                        children: c.title
+                    }, c.title, false, {
+                        fileName: "[project]/src/app/[projectId]/page.tsx",
+                        lineNumber: 342,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/src/app/[projectId]/page.tsx",
+                lineNumber: 330,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                style: {
+                    flex: 1,
+                    minWidth: 0,
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 24
+                },
+                children: contributions.map((c, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        ref: (el)=>{
+                            sectionRefs.current[i] = el;
+                        },
+                        style: {
+                            scrollMarginTop: 80
+                        },
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ContributionCard, {
+                            contribution: c
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/[projectId]/page.tsx",
+                            lineNumber: 373,
+                            columnNumber: 13
+                        }, this)
+                    }, c.title, false, {
+                        fileName: "[project]/src/app/[projectId]/page.tsx",
+                        lineNumber: 368,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/src/app/[projectId]/page.tsx",
+                lineNumber: 366,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/app/[projectId]/page.tsx",
+        lineNumber: 328,
+        columnNumber: 5
+    }, this);
+}
 function CaseStudyPage() {
     const params = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useParams"])();
     const projectId = params?.projectId;
     const project = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$data$2f$projects$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PROJECTS"].find((p)=>p.id === projectId);
-    const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     const [contextOpen, setContextOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const contextBtnRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
-    // Reset tab when project changes
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        setActiveTab(0);
         setContextOpen(false);
     }, [
         projectId
@@ -913,16 +1023,15 @@ function CaseStudyPage() {
                 children: "Project not found."
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 330,
+                lineNumber: 405,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 321,
+            lineNumber: 396,
             columnNumber: 7
         }, this);
     }
-    const activeContribution = project.contributions[activeTab];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         style: {
             minHeight: "100vh",
@@ -949,7 +1058,7 @@ function CaseStudyPage() {
                 children: "← back home"
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 340,
+                lineNumber: 413,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -965,7 +1074,7 @@ function CaseStudyPage() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 373,
+                        lineNumber: 446,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -992,7 +1101,7 @@ function CaseStudyPage() {
                                         children: project.label
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 388,
+                                        lineNumber: 461,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1006,18 +1115,18 @@ function CaseStudyPage() {
                                                 children: tag
                                             }, tag, false, {
                                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                                lineNumber: 402,
+                                                lineNumber: 475,
                                                 columnNumber: 17
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 400,
+                                        lineNumber: 473,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 387,
+                                lineNumber: 460,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1031,13 +1140,13 @@ function CaseStudyPage() {
                                 children: "Project Context"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 410,
+                                lineNumber: 483,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 376,
+                        lineNumber: 449,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1057,7 +1166,7 @@ function CaseStudyPage() {
                                 children: "My Contributions"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 427,
+                                lineNumber: 500,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1085,52 +1194,31 @@ function CaseStudyPage() {
                                         children: seg.text
                                     }, i, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 456,
+                                        lineNumber: 529,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 438,
+                                lineNumber: 511,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 421,
+                        lineNumber: 494,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        style: {
-                            display: "flex",
-                            gap: 8,
-                            flexWrap: "wrap",
-                            marginBottom: 24
-                        },
-                        children: project.contributions.map((c, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                className: `rect-btn${activeTab === i ? " rect-btn--active-black" : ""}`,
-                                onClick: ()=>setActiveTab(i),
-                                children: c.title
-                            }, c.title, false, {
-                                fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 484,
-                                columnNumber: 13
-                            }, this))
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ScrollLayout, {
+                        contributions: project.contributions
                     }, void 0, false, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 475,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ContributionCard, {
-                        contribution: activeContribution
-                    }, activeTab, false, {
-                        fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 495,
+                        lineNumber: 547,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 365,
+                lineNumber: 438,
                 columnNumber: 7
             }, this),
             contextOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ProjectContextModal, {
@@ -1139,13 +1227,13 @@ function CaseStudyPage() {
                 anchorRef: contextBtnRef
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 500,
+                lineNumber: 552,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/[projectId]/page.tsx",
-        lineNumber: 338,
+        lineNumber: 411,
         columnNumber: 5
     }, this);
 }

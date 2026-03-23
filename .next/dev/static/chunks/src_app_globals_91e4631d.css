@@ -170,6 +170,12 @@ a, button {
   }
 }
 
+@media (min-width: 1240px) {
+  .case-study-img {
+    max-width: 860px;
+  }
+}
+
 .impact-text, .modal-card {
   animation: .2s forwards fadeIn;
 }

@@ -471,7 +471,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navi
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$data$2f$projects$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/app/data/projects.ts [app-client] (ecmascript)");
 ;
-var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
+var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature(), _s2 = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
@@ -483,11 +483,11 @@ const COURIER = '"TT Commons Pro Mono", monospace';
 // ─── Media helper ────────────────────────────────────────────────────────────
 function Media(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(6);
-    if ($[0] !== "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2") {
+    if ($[0] !== "ce9c0e1a9b747cfad69f28cae8f630fe80018c0f8a5312d4d5b0e35017f6e26e") {
         for(let $i = 0; $i < 6; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2";
+        $[0] = "ce9c0e1a9b747cfad69f28cae8f630fe80018c0f8a5312d4d5b0e35017f6e26e";
     }
     const { src, style } = t0;
     if (!src) {
@@ -543,11 +543,11 @@ _c = Media;
 function ProjectContextModal(t0) {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(33);
-    if ($[0] !== "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2") {
+    if ($[0] !== "ce9c0e1a9b747cfad69f28cae8f630fe80018c0f8a5312d4d5b0e35017f6e26e") {
         for(let $i = 0; $i < 33; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2";
+        $[0] = "ce9c0e1a9b747cfad69f28cae8f630fe80018c0f8a5312d4d5b0e35017f6e26e";
     }
     const { sidebar, onClose, anchorRef } = t0;
     const [desktopPos, setDesktopPos] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
@@ -831,11 +831,11 @@ function _ProjectContextModalDivOnClick(e) {
 }
 function ContributionCard(t0) {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(20);
-    if ($[0] !== "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2") {
+    if ($[0] !== "ce9c0e1a9b747cfad69f28cae8f630fe80018c0f8a5312d4d5b0e35017f6e26e") {
         for(let $i = 0; $i < 20; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2";
+        $[0] = "ce9c0e1a9b747cfad69f28cae8f630fe80018c0f8a5312d4d5b0e35017f6e26e";
     }
     const { contribution } = t0;
     let t1;
@@ -851,7 +851,9 @@ function ContributionCard(t0) {
             background: "#fff",
             borderRadius: 16,
             padding: "32px 36px",
-            animation: "fadeIn 0.2s ease forwards"
+            animation: "fadeIn 0.2s ease forwards",
+            width: "fit-content",
+            minWidth: "min(100%, 860px)"
         };
         t3 = {
             fontFamily: PT_SANS,
@@ -876,7 +878,7 @@ function ContributionCard(t0) {
             children: t4
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 322,
+            lineNumber: 324,
             columnNumber: 10
         }, this);
         $[4] = t4;
@@ -906,7 +908,7 @@ function ContributionCard(t0) {
             children: contribution.expandedText
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 345,
+            lineNumber: 347,
             columnNumber: 10
         }, this);
         $[7] = contribution.expandedText;
@@ -925,7 +927,7 @@ function ContributionCard(t0) {
             children: contribution.expandedImages.map(_ContributionCardContributionExpandedImagesMap)
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 353,
+            lineNumber: 355,
             columnNumber: 41
         }, this);
         $[9] = contribution.expandedImages;
@@ -944,7 +946,7 @@ function ContributionCard(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 365,
+            lineNumber: 367,
             columnNumber: 10
         }, this);
         $[11] = t5;
@@ -961,7 +963,9 @@ function ContributionCard(t0) {
                 background: "#fff",
                 borderRadius: 16,
                 padding: "32px 36px",
-                animation: "fadeIn 0.2s ease forwards"
+                animation: "fadeIn 0.2s ease forwards",
+                width: "fit-content",
+                minWidth: "min(100%, 860px)"
             },
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -975,7 +979,7 @@ function ContributionCard(t0) {
                     children: contribution.subCard.title
                 }, void 0, false, {
                     fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 380,
+                    lineNumber: 384,
                     columnNumber: 8
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -991,7 +995,7 @@ function ContributionCard(t0) {
                     children: contribution.subCard.expandedText
                 }, void 0, false, {
                     fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 386,
+                    lineNumber: 390,
                     columnNumber: 43
                 }, this),
                 contribution.subCard.expandedImages && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1003,13 +1007,13 @@ function ContributionCard(t0) {
                     children: contribution.subCard.expandedImages.map(_ContributionCardContributionSubCardExpandedImagesMap)
                 }, void 0, false, {
                     fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 394,
+                    lineNumber: 398,
                     columnNumber: 89
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 375,
+            lineNumber: 377,
             columnNumber: 35
         }, this);
         $[15] = contribution.subCard;
@@ -1027,7 +1031,7 @@ function ContributionCard(t0) {
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 406,
+            lineNumber: 410,
             columnNumber: 11
         }, this);
         $[17] = t10;
@@ -1039,9 +1043,10 @@ function ContributionCard(t0) {
     return t11;
 }
 _c2 = ContributionCard;
-// ─── Case study page ──────────────────────────────────────────────────────────
+// ─── Scroll layout (side nav + all cards) ────────────────────────────────────
 function _ContributionCardContributionSubCardExpandedImagesMap(img_0, i_0) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "case-study-img",
         style: {
             width: "100%"
         },
@@ -1058,12 +1063,12 @@ function _ContributionCardContributionSubCardExpandedImagesMap(img_0, i_0) {
                     src: img_0.src
                 }, void 0, false, {
                     fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 426,
+                    lineNumber: 430,
                     columnNumber: 8
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 420,
+                lineNumber: 424,
                 columnNumber: 6
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1077,18 +1082,19 @@ function _ContributionCardContributionSubCardExpandedImagesMap(img_0, i_0) {
                 children: img_0.caption
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 426,
+                lineNumber: 430,
                 columnNumber: 39
             }, this)
         ]
     }, i_0, true, {
         fileName: "[project]/src/app/[projectId]/page.tsx",
-        lineNumber: 418,
+        lineNumber: 422,
         columnNumber: 10
     }, this);
 }
 function _ContributionCardContributionExpandedImagesMap(img, i) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "case-study-img",
         style: {
             width: "100%"
         },
@@ -1098,19 +1104,19 @@ function _ContributionCardContributionExpandedImagesMap(img, i) {
                     width: "100%",
                     aspectRatio: "4/3",
                     background: "#d8d8d8",
-                    overflow: "scroll",
+                    overflow: "hidden",
                     marginBottom: 8
                 },
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Media, {
                     src: img.src
                 }, void 0, false, {
                     fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 443,
+                    lineNumber: 447,
                     columnNumber: 8
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 437,
+                lineNumber: 441,
                 columnNumber: 6
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1124,24 +1130,241 @@ function _ContributionCardContributionExpandedImagesMap(img, i) {
                 children: img.caption
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 443,
+                lineNumber: 447,
                 columnNumber: 37
             }, this)
         ]
     }, i, true, {
         fileName: "[project]/src/app/[projectId]/page.tsx",
-        lineNumber: 435,
+        lineNumber: 439,
         columnNumber: 10
     }, this);
 }
-function CaseStudyPage() {
+function ScrollLayout(t0) {
     _s1();
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(20);
+    if ($[0] !== "ce9c0e1a9b747cfad69f28cae8f630fe80018c0f8a5312d4d5b0e35017f6e26e") {
+        for(let $i = 0; $i < 20; $i += 1){
+            $[$i] = Symbol.for("react.memo_cache_sentinel");
+        }
+        $[0] = "ce9c0e1a9b747cfad69f28cae8f630fe80018c0f8a5312d4d5b0e35017f6e26e";
+    }
+    const { contributions } = t0;
+    const [activeSection, setActiveSection] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    let t1;
+    if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
+        t1 = [];
+        $[1] = t1;
+    } else {
+        t1 = $[1];
+    }
+    const sectionRefs = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(t1);
+    let t2;
+    let t3;
+    if ($[2] !== contributions) {
+        t2 = ({
+            "ScrollLayout[useEffect()]": ()=>{
+                const observers = contributions.map({
+                    "ScrollLayout[useEffect() > contributions.map()]": (_, i)=>{
+                        const el = sectionRefs.current[i];
+                        if (!el) {
+                            return null;
+                        }
+                        const obs = new IntersectionObserver((t4)=>{
+                            const [entry] = t4;
+                            if (entry.isIntersecting) {
+                                setActiveSection(i);
+                            }
+                        }, {
+                            rootMargin: "-40% 0px -50% 0px",
+                            threshold: 0
+                        });
+                        obs.observe(el);
+                        return obs;
+                    }
+                }["ScrollLayout[useEffect() > contributions.map()]"]);
+                return ()=>observers.forEach(_ScrollLayoutUseEffectAnonymousObserversForEach);
+            }
+        })["ScrollLayout[useEffect()]"];
+        t3 = [
+            contributions
+        ];
+        $[2] = contributions;
+        $[3] = t2;
+        $[4] = t3;
+    } else {
+        t2 = $[3];
+        t3 = $[4];
+    }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(t2, t3);
+    let t4;
+    let t5;
+    if ($[5] === Symbol.for("react.memo_cache_sentinel")) {
+        t4 = {
+            display: "flex",
+            gap: 48,
+            alignItems: "flex-start"
+        };
+        t5 = {
+            position: "sticky",
+            top: 72,
+            flexShrink: 0,
+            width: 160,
+            display: "flex",
+            flexDirection: "column",
+            gap: 4
+        };
+        $[5] = t4;
+        $[6] = t5;
+    } else {
+        t4 = $[5];
+        t5 = $[6];
+    }
+    let t6;
+    if ($[7] !== activeSection || $[8] !== contributions) {
+        t6 = contributions.map({
+            "ScrollLayout[contributions.map()]": (c, i_0)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    onClick: {
+                        "ScrollLayout[contributions.map() > <button>.onClick]": ()=>sectionRefs.current[i_0]?.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start"
+                            })
+                    }["ScrollLayout[contributions.map() > <button>.onClick]"],
+                    style: {
+                        background: "none",
+                        border: "none",
+                        textAlign: "left",
+                        fontFamily: COURIER,
+                        fontSize: 13,
+                        padding: "6px 0",
+                        cursor: "none",
+                        color: activeSection === i_0 ? "#0015FF" : "#888",
+                        fontWeight: 400,
+                        transition: "color 0.2s",
+                        borderLeft: `2px solid ${activeSection === i_0 ? "#0015FF" : "transparent"}`,
+                        paddingLeft: 10
+                    },
+                    children: c.title
+                }, c.title, false, {
+                    fileName: "[project]/src/app/[projectId]/page.tsx",
+                    lineNumber: 537,
+                    columnNumber: 56
+                }, this)
+        }["ScrollLayout[contributions.map()]"]);
+        $[7] = activeSection;
+        $[8] = contributions;
+        $[9] = t6;
+    } else {
+        t6 = $[9];
+    }
+    let t7;
+    if ($[10] !== t6) {
+        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+            style: t5,
+            children: t6
+        }, void 0, false, {
+            fileName: "[project]/src/app/[projectId]/page.tsx",
+            lineNumber: 565,
+            columnNumber: 10
+        }, this);
+        $[10] = t6;
+        $[11] = t7;
+    } else {
+        t7 = $[11];
+    }
+    let t8;
+    if ($[12] === Symbol.for("react.memo_cache_sentinel")) {
+        t8 = {
+            flex: 1,
+            minWidth: 0,
+            display: "flex",
+            flexDirection: "column",
+            gap: 24
+        };
+        $[12] = t8;
+    } else {
+        t8 = $[12];
+    }
+    let t9;
+    if ($[13] !== contributions) {
+        t9 = contributions.map({
+            "ScrollLayout[contributions.map()]": (c_0, i_1)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    ref: {
+                        "ScrollLayout[contributions.map() > <div>.ref]": (el_0)=>{
+                            sectionRefs.current[i_1] = el_0;
+                        }
+                    }["ScrollLayout[contributions.map() > <div>.ref]"],
+                    style: {
+                        scrollMarginTop: 80
+                    },
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ContributionCard, {
+                        contribution: c_0
+                    }, void 0, false, {
+                        fileName: "[project]/src/app/[projectId]/page.tsx",
+                        lineNumber: 593,
+                        columnNumber: 10
+                    }, this)
+                }, c_0.title, false, {
+                    fileName: "[project]/src/app/[projectId]/page.tsx",
+                    lineNumber: 587,
+                    columnNumber: 58
+                }, this)
+        }["ScrollLayout[contributions.map()]"]);
+        $[13] = contributions;
+        $[14] = t9;
+    } else {
+        t9 = $[14];
+    }
+    let t10;
+    if ($[15] !== t9) {
+        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            style: t8,
+            children: t9
+        }, void 0, false, {
+            fileName: "[project]/src/app/[projectId]/page.tsx",
+            lineNumber: 602,
+            columnNumber: 11
+        }, this);
+        $[15] = t9;
+        $[16] = t10;
+    } else {
+        t10 = $[16];
+    }
+    let t11;
+    if ($[17] !== t10 || $[18] !== t7) {
+        t11 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            style: t4,
+            children: [
+                t7,
+                t10
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/app/[projectId]/page.tsx",
+            lineNumber: 610,
+            columnNumber: 11
+        }, this);
+        $[17] = t10;
+        $[18] = t7;
+        $[19] = t11;
+    } else {
+        t11 = $[19];
+    }
+    return t11;
+}
+_s1(ScrollLayout, "bzKsrgqBdvRHk86bU/pOIsN0eiA=");
+_c3 = ScrollLayout;
+// ─── Case study page ──────────────────────────────────────────────────────────
+function _ScrollLayoutUseEffectAnonymousObserversForEach(o) {
+    return o?.disconnect();
+}
+function CaseStudyPage() {
+    _s2();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(37);
-    if ($[0] !== "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2") {
+    if ($[0] !== "ce9c0e1a9b747cfad69f28cae8f630fe80018c0f8a5312d4d5b0e35017f6e26e") {
         for(let $i = 0; $i < 37; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4bd16eb6e1fe009e5673efe29abf411965847d3142ec3a8ef53f8a6a342c4dc2";
+        $[0] = "ce9c0e1a9b747cfad69f28cae8f630fe80018c0f8a5312d4d5b0e35017f6e26e";
     }
     const params = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"])();
     const projectId = params?.projectId;
@@ -1156,14 +1379,12 @@ function CaseStudyPage() {
         t0 = $[2];
     }
     const project = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$data$2f$projects$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PROJECTS"].find(t0);
-    const [activeTab, setActiveTab] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     const [contextOpen, setContextOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const contextBtnRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     let t1;
     if ($[3] !== setContextOpen) {
         t1 = ({
             "CaseStudyPage[useEffect()]": ()=>{
-                setActiveTab(0);
                 setContextOpen(false);
             }
         })["CaseStudyPage[useEffect()]"];
@@ -1198,12 +1419,12 @@ function CaseStudyPage() {
                     children: "Project not found."
                 }, void 0, false, {
                     fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 506,
+                    lineNumber: 677,
                     columnNumber: 10
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 500,
+                lineNumber: 671,
                 columnNumber: 12
             }, this);
             $[7] = t3;
@@ -1212,7 +1433,6 @@ function CaseStudyPage() {
         }
         return t3;
     }
-    const activeContribution = project.contributions[activeTab];
     let t3;
     if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
         t3 = {
@@ -1249,7 +1469,7 @@ function CaseStudyPage() {
             children: "← back home"
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 530,
+            lineNumber: 700,
             columnNumber: 10
         }, this);
         t5 = {
@@ -1263,7 +1483,7 @@ function CaseStudyPage() {
             }
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 548,
+            lineNumber: 718,
             columnNumber: 10
         }, this);
         t7 = {
@@ -1336,7 +1556,7 @@ function CaseStudyPage() {
             children: "Project Context"
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 613,
+            lineNumber: 783,
             columnNumber: 11
         }, this);
         $[18] = t10;
@@ -1364,7 +1584,7 @@ function CaseStudyPage() {
             children: "My Contributions"
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 628,
+            lineNumber: 798,
             columnNumber: 11
         }, this);
         t16 = {
@@ -1387,73 +1607,60 @@ function CaseStudyPage() {
         t15 = $[22];
         t16 = $[23];
     }
-    let t17;
-    if ($[24] === Symbol.for("react.memo_cache_sentinel")) {
-        t17 = {
-            display: "flex",
-            gap: 8,
-            flexWrap: "wrap",
-            marginBottom: 24
-        };
-        $[24] = t17;
-    } else {
-        t17 = $[24];
-    }
+    const t17 = project.summary.map(_CaseStudyPageProjectSummaryMap);
     let t18;
-    if ($[25] !== activeTab) {
-        t18 = ({
-            "CaseStudyPage[project.contributions.map()]": (c, i_0)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    className: `rect-btn${activeTab === i_0 ? " rect-btn--active-black" : ""}`,
-                    onClick: {
-                        "CaseStudyPage[project.contributions.map() > <button>.onClick]": ()=>setActiveTab(i_0)
-                    }["CaseStudyPage[project.contributions.map() > <button>.onClick]"],
-                    children: c.title
-                }, c.title, false, {
-                    fileName: "[project]/src/app/[projectId]/page.tsx",
-                    lineNumber: 670,
-                    columnNumber: 65
-                }, this)
-        })["CaseStudyPage[project.contributions.map()]"];
-        $[25] = activeTab;
+    if ($[24] !== t16 || $[25] !== t17) {
+        t18 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            style: t16,
+            children: t17
+        }, void 0, false, {
+            fileName: "[project]/src/app/[projectId]/page.tsx",
+            lineNumber: 828,
+            columnNumber: 11
+        }, this);
+        $[24] = t16;
+        $[25] = t17;
         $[26] = t18;
     } else {
         t18 = $[26];
     }
-    const t19 = project.contributions.map(t18);
+    let t19;
+    if ($[27] !== t14 || $[28] !== t15 || $[29] !== t18) {
+        t19 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            style: t14,
+            children: [
+                t15,
+                t18
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/app/[projectId]/page.tsx",
+            lineNumber: 837,
+            columnNumber: 11
+        }, this);
+        $[27] = t14;
+        $[28] = t15;
+        $[29] = t18;
+        $[30] = t19;
+    } else {
+        t19 = $[30];
+    }
     let t20;
-    if ($[27] !== t17 || $[28] !== t19) {
-        t20 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            style: t17,
-            children: t19
+    if ($[31] !== project.contributions) {
+        t20 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ScrollLayout, {
+            contributions: project.contributions
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 682,
+            lineNumber: 847,
             columnNumber: 11
         }, this);
-        $[27] = t17;
-        $[28] = t19;
-        $[29] = t20;
+        $[31] = project.contributions;
+        $[32] = t20;
     } else {
-        t20 = $[29];
+        t20 = $[32];
     }
     let t21;
-    if ($[30] !== activeContribution || $[31] !== activeTab) {
-        t21 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ContributionCard, {
-            contribution: activeContribution
-        }, activeTab, false, {
-            fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 691,
-            columnNumber: 11
-        }, this);
-        $[30] = activeContribution;
-        $[31] = activeTab;
-        $[32] = t21;
-    } else {
-        t21 = $[32];
-    }
-    let t22;
-    if ($[33] !== contextOpen || $[34] !== project || $[35] !== setContextOpen) {
-        t22 = contextOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ProjectContextModal, {
+    if ($[33] !== contextOpen || $[34] !== project.sidebar || $[35] !== setContextOpen) {
+        t21 = contextOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ProjectContextModal, {
             sidebar: project.sidebar,
             onClose: {
                 "CaseStudyPage[<ProjectContextModal>.onClose]": ()=>setContextOpen(false)
@@ -1461,15 +1668,15 @@ function CaseStudyPage() {
             anchorRef: contextBtnRef
         }, void 0, false, {
             fileName: "[project]/src/app/[projectId]/page.tsx",
-            lineNumber: 700,
+            lineNumber: 855,
             columnNumber: 26
         }, this);
         $[33] = contextOpen;
-        $[34] = project;
+        $[34] = project.sidebar;
         $[35] = setContextOpen;
-        $[36] = t22;
+        $[36] = t21;
     } else {
-        t22 = $[36];
+        t21 = $[36];
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         style: t3,
@@ -1489,7 +1696,7 @@ function CaseStudyPage() {
                                         children: project.label
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 710,
+                                        lineNumber: 865,
                                         columnNumber: 71
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1497,62 +1704,44 @@ function CaseStudyPage() {
                                         children: project.tags.map(_CaseStudyPageProjectTagsMap)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                                        lineNumber: 710,
+                                        lineNumber: 865,
                                         columnNumber: 106
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 710,
+                                lineNumber: 865,
                                 columnNumber: 66
                             }, this),
                             t13
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 710,
+                        lineNumber: 865,
                         columnNumber: 50
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        style: t14,
-                        children: [
-                            t15,
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                style: t16,
-                                children: project.summary.map(_CaseStudyPageProjectSummaryMap)
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/[projectId]/page.tsx",
-                                lineNumber: 710,
-                                columnNumber: 215
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/src/app/[projectId]/page.tsx",
-                        lineNumber: 710,
-                        columnNumber: 193
-                    }, this),
-                    t20,
-                    t21
+                    t19,
+                    t20
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/[projectId]/page.tsx",
-                lineNumber: 710,
+                lineNumber: 865,
                 columnNumber: 30
             }, this),
-            t22
+            t21
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/[projectId]/page.tsx",
-        lineNumber: 710,
+        lineNumber: 865,
         columnNumber: 10
     }, this);
 }
-_s1(CaseStudyPage, "E6uaWppIpKXH2vgFy0jSKpZ5VUg=", false, function() {
+_s2(CaseStudyPage, "KifWAPf9hRaJ2/biW71wvrJEKww=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"]
     ];
 });
-_c3 = CaseStudyPage;
+_c4 = CaseStudyPage;
 function _CaseStudyPageProjectSummaryMap(seg, i) {
     return typeof seg === "string" ? seg : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
         href: seg.url,
@@ -1566,7 +1755,7 @@ function _CaseStudyPageProjectSummaryMap(seg, i) {
         children: seg.text
     }, i, false, {
         fileName: "[project]/src/app/[projectId]/page.tsx",
-        lineNumber: 713,
+        lineNumber: 868,
         columnNumber: 42
     }, this);
 }
@@ -1579,7 +1768,7 @@ function _CaseStudyPageProjectTagsMap(tag) {
         children: tag
     }, tag, false, {
         fileName: "[project]/src/app/[projectId]/page.tsx",
-        lineNumber: 723,
+        lineNumber: 878,
         columnNumber: 10
     }, this);
 }
@@ -1589,11 +1778,12 @@ function _CaseStudyPageLinkOnMouseLeave(e_0) {
 function _CaseStudyPageLinkOnMouseEnter(e) {
     return e.currentTarget.style.textDecoration = "underline";
 }
-var _c, _c1, _c2, _c3;
+var _c, _c1, _c2, _c3, _c4;
 __turbopack_context__.k.register(_c, "Media");
 __turbopack_context__.k.register(_c1, "ProjectContextModal");
 __turbopack_context__.k.register(_c2, "ContributionCard");
-__turbopack_context__.k.register(_c3, "CaseStudyPage");
+__turbopack_context__.k.register(_c3, "ScrollLayout");
+__turbopack_context__.k.register(_c4, "CaseStudyPage");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }

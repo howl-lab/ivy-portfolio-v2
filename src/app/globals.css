@@ -186,6 +186,13 @@ button {
   }
 }
 
+/* ── Case study image cap on wide screens ── */
+@media (min-width: 1240px) {
+  .case-study-img {
+    max-width: 860px;
+  }
+}
+
 /* ── Impact text animation ── */
 .impact-text {
   animation: fadeIn 0.2s ease forwards;
