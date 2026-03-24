@@ -5,6 +5,7 @@ import CustomCursor from "./components/CustomCursor";
 export const metadata: Metadata = {
   title: "ivy chang",
   description: "design portfolio",
+  icons: { icon: "/favicon.png" },
 };
 
 export default function RootLayout({

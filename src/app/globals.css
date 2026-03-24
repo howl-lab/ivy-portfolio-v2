@@ -1,41 +1,47 @@
 @font-face {
   font-family: "TT Commons Pro";
-  src: url("/fonts/TT Commons Pro/TT Commons Pro Trial Normal.ttf") format("truetype");
+  src: url("/fonts/TT Commons Pro/TT Commons Pro Trial Normal.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "TT Commons Pro";
-  src: url("/fonts/TT Commons Pro/TT Commons Pro Trial Normal Italic.ttf") format("truetype");
+  src: url("/fonts/TT Commons Pro/TT Commons Pro Trial Normal Italic.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: "TT Commons Pro";
-  src: url("/fonts/TT Commons Pro/TT Commons Pro Trial Bold.ttf") format("truetype");
+  src: url("/fonts/TT Commons Pro/TT Commons Pro Trial Bold.ttf")
+    format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "TT Commons Pro";
-  src: url("/fonts/TT Commons Pro/TT Commons Pro Trial Bold Italic.ttf") format("truetype");
+  src: url("/fonts/TT Commons Pro/TT Commons Pro Trial Bold Italic.ttf")
+    format("truetype");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: "TT Commons Pro Mono";
-  src: url("/fonts/TT Commons Pro/TT Commons Pro Mono Trial Light.ttf") format("truetype");
+  src: url("/fonts/TT Commons Pro/TT Commons Pro Mono Trial Light.ttf")
+    format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "TT Commons Pro Mono";
-  src: url("/fonts/TT Commons Pro/TT Commons Pro Mono Trial Light Italic.ttf") format("truetype");
+  src: url("/fonts/TT Commons Pro/TT Commons Pro Mono Trial Light Italic.ttf")
+    format("truetype");
   font-weight: 300;
   font-style: italic;
 }
@@ -196,6 +202,71 @@ button {
 /* ── Impact text animation ── */
 .impact-text {
   animation: fadeIn 0.2s ease forwards;
+}
+
+@media (max-width: 640px) {
+  .impact-text {
+    top: 32% !important;
+    left: auto !important;
+    right: 24px !important;
+    transform: none !important;
+    text-align: right !important;
+  }
+}
+
+/* ── Case study scroll layout ── */
+.scroll-layout {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.scroll-nav {
+  position: sticky;
+  top: 72px;
+  flex-shrink: 0;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.scroll-nav-item {
+  text-align: left;
+  padding: 6px 0 6px 10px;
+  color: #888;
+  border-left: 2px solid transparent;
+}
+
+.scroll-nav-item--active {
+  color: #0015ff;
+  border-left-color: #0015ff;
+}
+
+@media (max-width: 640px) {
+  .scroll-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .scroll-nav {
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .scroll-nav-item {
+    padding: 6px 12px;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  .scroll-nav-item--active {
+    border-left-color: transparent;
+    border-bottom-color: #0015ff;
+  }
 }
 
 /* ── Modal ── */

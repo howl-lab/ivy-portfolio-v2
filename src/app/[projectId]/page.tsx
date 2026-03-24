@@ -143,7 +143,10 @@ function ProjectContextModal({
 
   return (
     <>
-      <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 9989 }} />
+      <div
+        onClick={onClose}
+        style={{ position: "fixed", inset: 0, zIndex: 9989 }}
+      />
       {card}
     </>
   );
@@ -272,7 +275,11 @@ function ContributionCard({ contribution }: { contribution: Contribution }) {
           {contribution.subCard.expandedImages && (
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
               {contribution.subCard.expandedImages.map((img, i) => (
-                <div key={i} className="case-study-img" style={{ width: "100%" }}>
+                <div
+                  key={i}
+                  className="case-study-img"
+                  style={{ width: "100%" }}
+                >
                   <div
                     style={{
                       width: "100%",
@@ -315,8 +322,10 @@ function ScrollLayout({ contributions }: { contributions: Contribution[] }) {
       const el = sectionRefs.current[i];
       if (!el) return null;
       const obs = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setActiveSection(i); },
-        { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(i);
+        },
+        { rootMargin: "-40% 0px -50% 0px", threshold: 0 },
       );
       obs.observe(el);
       return obs;
@@ -325,36 +334,27 @@ function ScrollLayout({ contributions }: { contributions: Contribution[] }) {
   }, [contributions]);
 
   return (
-    <div style={{ display: "flex", gap: 48, alignItems: "flex-start" }}>
-      {/* Side nav */}
-      <nav
-        style={{
-          position: "sticky",
-          top: 72,
-          flexShrink: 0,
-          width: 160,
-          display: "flex",
-          flexDirection: "column",
-          gap: 4,
-        }}
-      >
+    <div className="scroll-layout">
+      {/* Nav */}
+      <nav className="scroll-nav">
         {contributions.map((c, i) => (
           <button
             key={c.title}
-            onClick={() => sectionRefs.current[i]?.scrollIntoView({ behavior: "smooth", block: "start" })}
+            className={`scroll-nav-item${activeSection === i ? " scroll-nav-item--active" : ""}`}
+            onClick={() =>
+              sectionRefs.current[i]?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              })
+            }
             style={{
               background: "none",
               border: "none",
-              textAlign: "left",
               fontFamily: COURIER,
               fontSize: 13,
-              padding: "6px 0",
               cursor: "none",
-              color: activeSection === i ? "#0015FF" : "#888",
               fontWeight: 400,
               transition: "color 0.2s",
-              borderLeft: `2px solid ${activeSection === i ? "#0015FF" : "transparent"}`,
-              paddingLeft: 10,
             }}
           >
             {c.title}
@@ -363,16 +363,107 @@ function ScrollLayout({ contributions }: { contributions: Contribution[] }) {
       </nav>
 
       {/* All cards stacked */}
-      <div style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", gap: 24 }}>
+      <div
+        style={{
+          flex: 1,
+          minWidth: 0,
+          display: "flex",
+          flexDirection: "column",
+          gap: 24,
+        }}
+      >
         {contributions.map((c, i) => (
           <div
             key={c.title}
-            ref={(el) => { sectionRefs.current[i] = el; }}
+            ref={(el) => {
+              sectionRefs.current[i] = el;
+            }}
             style={{ scrollMarginTop: 80 }}
           >
             <ContributionCard contribution={c} />
           </div>
         ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── Password gate ────────────────────────────────────────────────────────────
+function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
+  const [value, setValue] = useState("");
+  const [error, setError] = useState(false);
+
+  const submit = () => {
+    if (value.toLowerCase() === "scribble") {
+      onUnlock();
+    } else {
+      setError(true);
+      setValue("");
+    }
+  };
+
+  return (
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "#ebebeb",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Link
+        href="/"
+        style={{
+          position: "fixed",
+          top: 24,
+          left: "50%",
+          transform: "translateX(-50%)",
+          fontFamily: COURIER,
+          fontSize: 14,
+          color: "#888",
+          textDecoration: "none",
+          zIndex: 100,
+        }}
+        onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "underline")}
+        onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")}
+      >
+        ← back home
+      </Link>
+      <div style={{ display: "flex", flexDirection: "column", gap: 12, alignItems: "flex-start" }}>
+        <p style={{ fontFamily: PT_SANS, fontSize: 16, color: "#111" }}>
+          This case study is password protected.
+        </p>
+        <div style={{ display: "flex", gap: 8 }}>
+          <input
+            type="password"
+            value={value}
+            placeholder="enter password"
+            onChange={(e) => { setValue(e.target.value); setError(false); }}
+            onKeyDown={(e) => e.key === "Enter" && submit()}
+            style={{
+              fontFamily: COURIER,
+              fontSize: 14,
+              padding: "8px 12px",
+              border: `1px solid ${error ? "#ff0000" : "#ccc"}`,
+              background: "#fff",
+              outline: "none",
+              borderRadius: 0,
+              width: 220,
+            }}
+          />
+          <button
+            className="rect-btn"
+            onClick={submit}
+          >
+            Enter
+          </button>
+        </div>
+        {error && (
+          <p style={{ fontFamily: COURIER, fontSize: 13, color: "#ff0000" }}>
+            incorrect password
+          </p>
+        )}
       </div>
     </div>
   );
@@ -384,12 +475,17 @@ export default function CaseStudyPage() {
   const projectId = params?.projectId as string;
   const project = PROJECTS.find((p) => p.id === projectId);
 
+  const [unlocked, setUnlocked] = useState(false);
   const [contextOpen, setContextOpen] = useState(false);
   const contextBtnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     setContextOpen(false);
   }, [projectId]);
+
+  if (project?.id === "grand-theft-auto" && !unlocked) {
+    return <PasswordGate onUnlock={() => setUnlocked(true)} />;
+  }
 
   if (!project) {
     return (
@@ -426,7 +522,8 @@ export default function CaseStudyPage() {
           pointerEvents: "auto",
         }}
         onMouseEnter={(e) =>
-          ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "underline")
+          ((e.currentTarget as HTMLAnchorElement).style.textDecoration =
+            "underline")
         }
         onMouseLeave={(e) =>
           ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")
@@ -486,7 +583,7 @@ export default function CaseStudyPage() {
             onClick={() => setContextOpen((o) => !o)}
             style={{ flexShrink: 0, marginTop: 4 }}
           >
-            Project Context
+            Scope
           </button>
         </div>
 

@@ -37,14 +37,16 @@ function PineTree({ size = 28 }: { size?: number }) {
 }
 
 const TREES = [
-  { left: "4%", top: "20%" },
-  { left: "16%", top: "10%" },
-  { left: "28%", top: "28%" },
-  { left: "40%", top: "14%" },
-  { left: "55%", top: "24%" },
-  { left: "68%", top: "8%" },
-  { left: "80%", top: "28%" },
-  { left: "91%", top: "14%" },
+  { left: "3%", top: "20%" },
+  { left: "10%", top: "65%" },
+  { left: "19%", top: "18%" },
+  { left: "27%", top: "72%" },
+  { left: "36%", top: "12%" },
+  { left: "64%", top: "15%" },
+  { left: "72%", top: "68%" },
+  { left: "80%", top: "10%" },
+  { left: "89%", top: "60%" },
+  { left: "95%", top: "25%" },
 ];
 
 // ─── Media helper ───────────────────────────────────────────────────────────
@@ -147,7 +149,7 @@ function AboutModal({ onClose }: { onClose: () => void }) {
           ))}
         </div>
 
-        <p style={{ fontSize: 15, color: "#0015FF", marginBottom: 16 }}>
+        <p style={{ fontSize: 16, color: "#0015FF", marginBottom: 16 }}>
           ivychang02@gmail.com
         </p>
 
@@ -312,7 +314,7 @@ export default function HomePage() {
               key={i}
               style={{ position: "absolute", ...pos, lineHeight: 0, zIndex: 0 }}
             >
-              <PineTree size={26} />
+              <PineTree size={32} />
             </span>
           ))}
 
