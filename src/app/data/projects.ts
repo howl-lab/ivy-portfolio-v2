@@ -21,9 +21,7 @@ export interface Contribution {
 
 interface Sidebar {
   problem: string;
-  why: string;
   proposal: string;
-  outcome: string;
 }
 
 export interface Project {
@@ -41,16 +39,13 @@ export const PROJECTS: Project[] = [
     label: "Presence AI",
     tags: ["0-1", "GenAI", "conversational", "avatar"],
     summary: [
-      "As the founding designer on a team of mostly engineers, I was responsible for the design of a 0-1 product: interactions, design system, and user interface. I also supported the team in research, analytics, and  product strategies.\n Company goal: 500K-1M MAU + 20% 5min session time and 10% for 10min",
+      "As the founding designer on a team of mostly engineers, I was responsible for the design of a 0-1 product: interactions, design system, and user interface. I also supported the team in research, analytics, and product strategies.",
     ],
     sidebar: {
       problem:
-        "How do we elevate human and AI conversation? (eg. format or cadence)",
-      why: "The conversational space is mostly saturated by text-based interactions",
+        "The conversational space is mostly saturated by text-based interactions. How do we elevate human and AI conversation? (eg. format or cadence)",
       proposal:
-        "Multimodal consumer-facing live digital avatar application (generative video + audio)",
-      outcome:
-        "Product validation resulted in a coded beta with 4K DAU before sunsetting. \n Ultimately, the experiment showed: casino behavior, high cost per avatar and technical requirements",
+        "Multimodal consumer-facing realtime digital avatar application (generative video + audio)",
     },
     contributions: [
       {
@@ -139,19 +134,18 @@ export const PROJECTS: Project[] = [
     label: "Headroom",
     tags: ["B2B", "AI", "collaboration", "acquired"],
     summary: [
+      "As the sole and lead designer on the team, I facilitated collaboration between Heads of Product, Engineering, and Marketing on a product that makes it easy to leverage multimodal AI to create collaborative experiences and led design on an extension collaboration with Lucid. \n \n ☞ Collaboration with Lucidspark launched July 2023. Developer platform pivoted in 3 months. ",
       {
         text: "Acquired",
         url: "https://investors.upwork.com/news-releases/news-release-details/upwork-reports-fourth-quarter-and-full-year-2023-financial",
       },
-      " by Upwork in November 2023. \n \n As the sole and lead designer on the team, I facilitated collaboration between Heads of Product, Engineering, and Marketing on a platform that makes it easy to leverage multimodal AI to create collaborative experiences",
+      " by Upwork November 2023",
     ],
     sidebar: {
-      problem: "How do we help people collaborate more easily?",
-      why: "The pandemic fast-tracked remote collaboration and people are spending more time in meetings trying to take notes than being present",
+      problem:
+        "The pandemic fast-tracked remote meetings and people are spending more time trying to take notes than being present. How do we help people collaborate more easily?",
       proposal:
-        "AI-powered collaboration with capabilities like summaries, replay, highlight, auto transcripts, action items and search",
-      outcome:
-        "Collaboration with Lucidspark launched July 2023. Developer platform pivoted in 3 months, acquired by Upwork November 29 2023",
+        "AI-powered collaboration platform with capabilities like summaries, replay, highlight, auto transcripts, action items and search",
     },
     contributions: [
       {
@@ -220,16 +214,13 @@ export const PROJECTS: Project[] = [
         text: "License Plate Creator",
         url: "https://www.rockstargames.com/gta-online/license-plates",
       },
-      ", that lets player personalize in-game plates out-of-console \n \n Part of the innovation Marketing team on a design team of 3. Defined the majority of the interface and interactions; built off GTA's main design system",
+      ", that lets player personalize plates on the web to be applied in-console \n \n Part of the innovation Marketing team on a design team of 3. Defined the majority of the interface and interactions; built off GTA's main design system \n \n ☞ The License Plate Creator was launched in 2023 to over millions of players and received positive feedbacks",
     ],
     sidebar: {
       problem:
-        "The studio wanted to create 'companion apps' that let players enjoy in-game contents out of their console. The 2013 companion app, iFruit, has 2.2 stars rating / 400K reviews and was very buggy.",
-      why: "There are over 100 million players and over 740 vehicles in the game. UXR showed vehicles as a valuable touchpoint for personalization",
+        "The studio wanted to create 'companion apps' that let players enjoy in-game contents out of their console. The 2013 companion app, iFruit, has 2.2 stars rating / 400K reviews and was very buggy. It was shut down in 2022. ",
       proposal:
-        "A companion experience on the browser where users can create their license plate",
-      outcome:
-        "The License Plate Creator was launched in 2023 to over 15 million players and received positive feedback",
+        "There are over 18 million players and over 740 vehicles in the game. UXR showed vehicles as a valuable touchpoint for personalization and expression. Create a companion experience on the browser where users can create license plates off-console",
     },
     contributions: [
       {
@@ -299,7 +290,7 @@ export const PROJECTS: Project[] = [
         text: "digital exhibition",
         url: "https://madmuseum.org/burke-prize-2021/",
       },
-      " for the Burke Prize 2021, with the aim to focus on accessibility and showcase artists' work in narrative form. \n \n Won Museum Association of NY's 2022 Awards of Merit for ",
+      " for the Burke Prize 2021, with the aim to focus on accessibility and showcase artists' work in digital narrative form. \n \n ☞ Launched in 2022 and won Museum Association of NY's 2022 Awards of Merit for ",
       {
         text: "Excellence in Design",
         url: "https://www.newyorkalmanack.com/2022/03/museum-association-of-ny-announces-2022-awards-of-merit/",
@@ -308,11 +299,9 @@ export const PROJECTS: Project[] = [
     ],
     sidebar: {
       problem:
-        "The exhibition normally takes place onsite at New York, but due to Covid, had to be remote",
-      why: "The Burke Prize, a biannual contemporary art prize for a new generation of artists working in a world of expanded media with a foundation in glass, fiber, clay, metal, or wood.",
+        "The Burke Prize, a biannual contemporary art prize for new artists working with expanded media (glass, fiber, clay, metal, or wood). Normally take place onsite at New York, but due to Covid, had to be remote",
       proposal:
-        "A digital exhibition that introduced all 14 artists and their work",
-      outcome: "Launched 2022 🚀 and received accolades",
+        "An online exhibition that introduced all 14 artists and their work, with the winner being revealed online.",
     },
     contributions: [
       {
@@ -380,12 +369,12 @@ export const PROJECTS: Project[] = [
     label: "Socratic",
     tags: ["GenAI", "education", "Google", "app"],
     summary: [
-      "I led visual design on the Socratic team to rebrand the AI-powered app, ",
+      "I joind in Spring and led visual design on the Socratic team to rebrand the AI-powered app, ",
       {
         text: "Socratic",
         url: "https://en.wikipedia.org/wiki/Socratic_(Google)",
       },
-      ", that help students with their homework by providing educational resources like videos, definitions, Q&A, links and more \n \n Launched 2019: ",
+      ", that help students with their homework by providing educational resources like videos, definitions, Q&A, links and more \n \n ☞ Launched Fall 2019: ",
       {
         text: "Google's blog",
         url: "https://blog.google/products-and-platforms/products/education/socratic-by-google/#:~:text=To%20help%20students%20working%20on,them%20work%20through%20their%20questions.",
@@ -395,16 +384,13 @@ export const PROJECTS: Project[] = [
         text: "TIME",
         url: "https://time.com/4650119/socratic-app-homework-iphone/",
       },
-      ". \n Socratic moved to the Google app in 2024.",
+      ". Socratic moved to the Google app in 2024.",
     ],
     sidebar: {
       problem:
-        "Regular Google search can be daunting for younger learners and Google just acquired an AI educational app called Socratic",
-      why: "The app uses a combination of OCR, AI and machine learning to surface relevant learning resources (eg. websites, videos, links) for students",
+        "Regular Google search can be daunting for younger learners and Google just acquired an app called Socratic, that uses a combination of OCR, AI and machine learning to surface relevant learning resources (eg. websites, videos, links) for students. ",
       proposal:
-        "Rebrand the app as a learning-focused search by Google, ready for back to school in fall",
-      outcome:
-        "Launched: August 2019. 4.9 ⭐️ on app store. Daily active users from 120K in Sept. 2019 to 750K in April 2020 (+525%)",
+        "Rebrand the app, inside and out, as a learning-focused search by Google to be launch for students in the Fall.",
     },
     contributions: [
       {
@@ -505,5 +491,3 @@ export const PROJECTS: Project[] = [
     ],
   },
 ];
-
-export const SIDEBAR_ITEMS = ["problem", "why", "proposal", "outcome"] as const;

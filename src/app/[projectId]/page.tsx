@@ -3,7 +3,14 @@
 import { useState, useRef, useEffect } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { PROJECTS, SIDEBAR_ITEMS, type Contribution } from "../data/projects";
+import { PROJECTS, type Contribution } from "../data/projects";
+
+const SIDEBAR_LABELS: Record<string, string> = {
+  problem: "Problem",
+  why: "Why",
+  proposal: "Proposal",
+  outcome: "Outcome",
+};
 
 const PT_SANS = '"TT Commons Pro", sans-serif';
 const COURIER = '"TT Commons Pro Mono", monospace';
@@ -23,132 +30,6 @@ function Media({ src, style }: { src: string; style?: React.CSSProperties }) {
   ) : (
     // eslint-disable-next-line @next/next/no-img-element
     <img src={src} alt="" style={base} />
-  );
-}
-
-// ─── Project Context modal ───────────────────────────────────────────────────
-function ProjectContextModal({
-  sidebar,
-  onClose,
-  anchorRef,
-}: {
-  sidebar: (typeof PROJECTS)[0]["sidebar"];
-  onClose: () => void;
-  anchorRef: React.RefObject<HTMLButtonElement | null>;
-}) {
-  const [desktopPos, setDesktopPos] = useState<{ x: number; y: number } | null>(
-    null,
-  );
-  const [isMobile, setIsMobile] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    const update = () => {
-      const mobile = window.innerWidth < 640;
-      setIsMobile(mobile);
-      if (!mobile) {
-        const x = anchorRef.current
-          ? anchorRef.current.getBoundingClientRect().right - 360
-          : window.innerWidth - 400;
-        const y = anchorRef.current
-          ? anchorRef.current.getBoundingClientRect().bottom + 8
-          : 80;
-        setDesktopPos({ x, y });
-      }
-    };
-    update();
-    window.addEventListener("resize", update);
-    return () => window.removeEventListener("resize", update);
-  }, [anchorRef]);
-
-  if (isMobile === null) return null;
-
-  const LABELS: Record<string, string> = {
-    problem: "Problem",
-    why: "Why",
-    proposal: "Proposal",
-    outcome: "Outcome",
-  };
-
-  const card = (
-    <div
-      className="modal-card"
-      style={{
-        background: "#fff",
-        border: "1px solid #0015ff",
-        borderRadius: 0,
-        width: isMobile ? "90vw" : 360,
-        maxWidth: isMobile ? 400 : "90vw",
-        maxHeight: "80vh",
-        display: "flex",
-        flexDirection: "column",
-        ...(isMobile
-          ? {}
-          : {
-              position: "fixed",
-              top: desktopPos?.y ?? 80,
-              left: desktopPos?.x ?? window.innerWidth - 400,
-              zIndex: 9990,
-            }),
-      }}
-    >
-      {/* Content */}
-      <div style={{ padding: "20px 20px 24px", overflowY: "auto", flex: 1 }}>
-        {SIDEBAR_ITEMS.map((key) => (
-          <div key={key} style={{ marginBottom: 20 }}>
-            <p
-              style={{
-                fontFamily: PT_SANS,
-                fontSize: 14,
-                color: "#888",
-                textTransform: "uppercase",
-                marginBottom: 6,
-              }}
-            >
-              {LABELS[key]}
-            </p>
-            <p
-              style={{
-                fontFamily: PT_SANS,
-                fontSize: 16,
-                color: "#111",
-                lineHeight: 1.6,
-              }}
-            >
-              {sidebar[key]}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-
-  if (isMobile) {
-    return (
-      <div
-        onClick={onClose}
-        style={{
-          position: "fixed",
-          inset: 0,
-          zIndex: 9990,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "20px",
-        }}
-      >
-        <div onClick={(e) => e.stopPropagation()}>{card}</div>
-      </div>
-    );
-  }
-
-  return (
-    <>
-      <div
-        onClick={onClose}
-        style={{ position: "fixed", inset: 0, zIndex: 9989 }}
-      />
-      {card}
-    </>
   );
 }
 
@@ -425,12 +306,24 @@ function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
           textDecoration: "none",
           zIndex: 100,
         }}
-        onMouseEnter={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "underline")}
-        onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")}
+        onMouseEnter={(e) =>
+          ((e.currentTarget as HTMLAnchorElement).style.textDecoration =
+            "underline")
+        }
+        onMouseLeave={(e) =>
+          ((e.currentTarget as HTMLAnchorElement).style.textDecoration = "none")
+        }
       >
         ← back home
       </Link>
-      <div style={{ display: "flex", flexDirection: "column", gap: 12, alignItems: "flex-start" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 12,
+          alignItems: "flex-start",
+        }}
+      >
         <p style={{ fontFamily: PT_SANS, fontSize: 16, color: "#111" }}>
           This case study is password protected.
         </p>
@@ -439,7 +332,10 @@ function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
             type="password"
             value={value}
             placeholder="enter password"
-            onChange={(e) => { setValue(e.target.value); setError(false); }}
+            onChange={(e) => {
+              setValue(e.target.value);
+              setError(false);
+            }}
             onKeyDown={(e) => e.key === "Enter" && submit()}
             style={{
               fontFamily: COURIER,
@@ -452,10 +348,7 @@ function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
               width: 220,
             }}
           />
-          <button
-            className="rect-btn"
-            onClick={submit}
-          >
+          <button className="rect-btn" onClick={submit}>
             Enter
           </button>
         </div>
@@ -476,12 +369,6 @@ export default function CaseStudyPage() {
   const project = PROJECTS.find((p) => p.id === projectId);
 
   const [unlocked, setUnlocked] = useState(false);
-  const [contextOpen, setContextOpen] = useState(false);
-  const contextBtnRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    setContextOpen(false);
-  }, [projectId]);
 
   if (project?.id === "grand-theft-auto" && !unlocked) {
     return <PasswordGate onUnlock={() => setUnlocked(true)} />;
@@ -575,16 +462,42 @@ export default function CaseStudyPage() {
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Right: Project Context button */}
-          <button
-            ref={contextBtnRef}
-            className={`rect-btn${contextOpen ? " rect-btn--active-blue" : ""}`}
-            onClick={() => setContextOpen((o) => !o)}
-            style={{ flexShrink: 0, marginTop: 4 }}
-          >
-            Scope
-          </button>
+        {/* ── Problem + Proposal ── */}
+        <div
+          style={{
+            display: "flex",
+            gap: 48,
+            marginBottom: 40,
+            flexWrap: "wrap",
+          }}
+        >
+          {(["problem", "proposal"] as const).map((key) => (
+            <div key={key} style={{ flex: 1, minWidth: 220 }}>
+              <p
+                style={{
+                  fontFamily: COURIER,
+                  fontSize: 12,
+                  color: "#888",
+                  textTransform: "uppercase",
+                  marginBottom: 6,
+                }}
+              >
+                {SIDEBAR_LABELS[key]}
+              </p>
+              <p
+                style={{
+                  fontFamily: PT_SANS,
+                  fontSize: 16,
+                  color: "#444",
+                  lineHeight: 1.5,
+                }}
+              >
+                {project.sidebar[key]}
+              </p>
+            </div>
+          ))}
         </div>
 
         {/* ── My Contributions ── */}
@@ -643,15 +556,6 @@ export default function CaseStudyPage() {
 
         <ScrollLayout contributions={project.contributions} />
       </div>
-
-      {/* ── Draggable Project Context modal ── */}
-      {contextOpen && (
-        <ProjectContextModal
-          sidebar={project.sidebar}
-          onClose={() => setContextOpen(false)}
-          anchorRef={contextBtnRef}
-        />
-      )}
     </div>
   );
 }
