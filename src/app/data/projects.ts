@@ -196,6 +196,10 @@ export const PROJECTS: Project[] = [
               "I shaped the design system, typography, and visual language (inspired by retro delight 👾)",
           },
           {
+            src: "/images/headroom/headroomcore.mp4",
+            caption: "",
+          },
+          {
             src: "/images/headroom/headroom2.jpg",
             caption:
               "Designed website for SEO discovery and outreach to B2B partners",
